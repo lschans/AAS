@@ -14,5 +14,7 @@
   "production"  : "./production/",
   "loginroot"   : "loginroot/",
   "mobileroot"  : "mobileroot/",
-  "webroot"     : "webroot/"
+  "webroot"     : "webroot/",
+  "index"       : "index.html",
+  "logout"      : "logout.html"
 }

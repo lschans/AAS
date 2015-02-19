@@ -1,0 +1,4 @@
+{
+  "logout"  : {"url":"/logout","file":"loginroot/logout.html"},
+  "error"   : {"url":"/error","file":"error.html"}
+}

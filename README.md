@@ -5,3 +5,4 @@ The perfect angular server in nodejs
     * Auto reload
     * SSL
     * SPDY
+    * Redis sockets

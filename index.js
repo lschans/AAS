@@ -8,6 +8,9 @@
  *-----------------------------------------------------
  */
 
-var config = require('./config/config.js');
+var config = require('./config/config.js'),
+    helpers = require('@dyflexis/server_helpers')(config);
 
-console.log(config);
+//console.log(config);
+console.log(helpers.randomString(255));
+

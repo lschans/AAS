@@ -32,6 +32,9 @@ if(config.global.verbose === true) console.log('    *   Restricted file config l
 config.restrictedTypes = require('./restrictedTypes.json');
 if(config.global.verbose === true) console.log('    *   Restricted type config loaded.');
 
+config.helpers = require('./helpers.json');
+if(config.global.verbose === true) console.log('    *   Helpers loaded.');
+
 config.spdy = require('./spdy.json');
 if(config.global.verbose === true) console.log('    *   SPDY config loaded.');
 

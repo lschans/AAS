@@ -1,1 +1,14 @@
-{}
+[
+  {
+    "uid":"0",
+    "name":"admin",
+    "pass":"test",
+    "nick":"sysop"
+  },
+  {
+    "uid":"1",
+    "name":"user",
+    "pass":"test",
+    "nick":"user"
+  }
+]

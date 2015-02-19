@@ -1,1 +1,18 @@
-{}
+{
+  "httpport"    : 80,
+  "sslport"     : 443,
+  "devport"     : 8080,
+  "livereload"  : 35729,
+  "ip"          : [
+                    "0.0.0.0",
+                    "127.0.0.1"
+                  ],
+  "log"         : true,
+  "logfile"     : "./server.log",
+  "verbose"     : true,
+  "development" : "./development/",
+  "production"  : "./production/",
+  "loginroot"   : "loginroot/",
+  "mobileroot"  : "mobileroot/",
+  "webroot"     : "webroot/"
+}

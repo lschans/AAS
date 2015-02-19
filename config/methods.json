@@ -1,1 +1,11 @@
-{}
+{
+  "GET": {"enabled":true, "description":"Retrieve whatever data is identified by the URI."},
+  "POST": {"enabled":true, "description":"Creates a new object linked to the specified object."},
+  "PUT": {"enabled":true, "description":"Specifies that the data in the body section is to be stored under the supplied URL."},
+  "DELETE": {"enabled":true, "description":"Requests that the server delete the information corresponding to the given URL."},
+  "OPTIONS": {"enabled":true, "description":"Requests the possible OPTIONS for the given URI."},
+  "HEAD": {"enabled":true, "description":"The same as GET but returns only HTTP headers and no document body."},
+  "TRACE": {"enabled":false, "description":"Echoes back the received request so that a client can see what (if any) changes or additions have been made by intermediate servers."},
+  "CONNECT": {"enabled":false, "description":"Converts the request connection to a transparent TCP/IP tunnel"},
+  "PATCH": {"enabled":false, "description":"Applies partial modifications to a resource."}
+}

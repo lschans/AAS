@@ -1,1 +1,30 @@
-{}
+[
+  {
+    "no":"301",
+    "message":"Permanent moved"
+  },
+  {
+    "no":"302",
+    "message":"Temporary moved"
+  },
+  {
+    "no":"401",
+    "message":"Unauthorized"
+  },
+  {
+    "no":"403",
+    "message":"Forbidden"
+  },
+  {
+    "no":"404",
+    "message":"Page not found"
+  },
+  {
+    "no":"500",
+    "message":"Internal error"
+  },
+  {
+    "no":"501",
+    "message":"Not implemented"
+  }
+]

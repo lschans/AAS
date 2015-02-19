@@ -7,3 +7,7 @@
  * Email:  lars@wodanbrothers.com
  *-----------------------------------------------------
  */
+
+var config = require('./config/config.js');
+
+console.log(config);

@@ -1,9 +1,0 @@
-{
-  "301": {"message": "Permanent moved", "gotoUrl":"/"},
-  "302": {"message": "Temporary moved", "gotoUrl":"/"},
-  "401": {"message": "Unauthorized", "gotoUrl":"/"},
-  "403": {"message": "Forbidden", "gotoUrl":"/"},
-  "404": {"message": "Page not found", "gotoUrl":"/"},
-  "500": {"message": "Internal error", "gotoUrl":"/"},
-  "501": {"message": "Not implemented", "gotoUrl":"/"}
-}

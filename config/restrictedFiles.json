@@ -1,0 +1,4 @@
+{
+  ".htaccess": { "description": "htaccess files should never be served to users"},
+  ".htpasswd": { "description": "htpasswd files should never be served to users"}
+}

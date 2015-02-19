@@ -5,7 +5,8 @@
   "livereload"  : 35729,
   "ip"          : [
                     "0.0.0.0",
-                    "127.0.0.1"
+                    "127.0.0.1",
+                    "localhost"
                   ],
   "log"         : true,
   "logfile"     : "./server.log",
@@ -16,5 +17,7 @@
   "mobileroot"  : "mobileroot/",
   "webroot"     : "webroot/",
   "index"       : "index.html",
-  "logout"      : "logout.html"
+  "logout"      : "logout.html",
+  "hiddenFiles" : false,
+  "cache"       : true
 }

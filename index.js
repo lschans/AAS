@@ -9,8 +9,11 @@
  */
 
 var config = require('./config/config.js'),
-    helpers = require('@dyflexis/server_helpers')(config);
+    helpers = require('@dyflexis/server_helpers')(config),
+    mobileDetect = require('mobile-detect');
 
+
+//config.reload();
 //console.log(config);
-console.log(helpers.randomString(255));
+//console.log(helpers.dateCookieString(255255255255));
 

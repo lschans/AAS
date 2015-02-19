@@ -1,13 +1,13 @@
 {
-  "200": {"message": "OK", "gotoUrl":""},
-  "301": {"message": "Permanent moved", "gotoUrl":""},
-  "302": {"message": "Temporary moved", "gotoUrl":""},
-  "307": {"message": "Temporary redirect", "gotoUrl":""},
-  "308": {"message": "Permanent redirect", "gotoUrl":""},
-  "401": {"message": "Unauthorized", "gotoUrl":"/"},
-  "403": {"message": "Forbidden", "gotoUrl":"/"},
-  "404": {"message": "Path not found", "gotoUrl":"/"},
-  "415": {"message": "File type not supported", "gotoUrl":"/"},
-  "500": {"message": "Internal error", "gotoUrl":"/"},
-  "501": {"message": "Not implemented", "gotoUrl":"/"}
+  "200": {"message": "OK", "gotoUrl":"", "error":false},
+  "301": {"message": "Permanent moved", "gotoUrl":"", "error":false},
+  "302": {"message": "Temporary moved", "gotoUrl":"", "error":false},
+  "307": {"message": "Temporary redirect", "gotoUrl":"", "error":false},
+  "308": {"message": "Permanent redirect", "gotoUrl":"", "error":false},
+  "401": {"message": "Unauthorized", "gotoUrl":"/", "error":true},
+  "403": {"message": "Forbidden", "gotoUrl":"/", "error":true},
+  "404": {"message": "Path not found", "gotoUrl":"/", "error":true},
+  "415": {"message": "File type not supported", "gotoUrl":"", "error":true},
+  "500": {"message": "Internal error", "gotoUrl":"/", "error":true},
+  "501": {"message": "Not implemented", "gotoUrl":"/", "error":true}
 }

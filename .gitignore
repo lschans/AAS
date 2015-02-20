@@ -24,7 +24,7 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules/
 */node_modules
-!node_modules/@dyflexis
+!node_modules/@dyflexis/*
 !*/node_modules/@dyflexis
 
 # Users Environment Variables

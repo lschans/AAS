@@ -12,11 +12,16 @@
 global.console.log = require('eyes').inspector({maxLength: (1024 * 8)});
 
 var config = require('./config/config.js'),
+    server = {},
     cluster = require('cluster'),
     numCPUs = require('os').cpus().length,
-    helpers = require('@dyflexis/server_helpers')(config),
-    session = require('@dyflexis/session')(config),
     mobileDetect = require('mobile-detect');
+
+server.config = config;
+server.helpers = require('@dyflexis/server_helpers')(server);
+server.log = require('@dyflexis/logger')(server);
+server.user = require('@dyflexis/user')(server);
+server.session = require('@dyflexis/session')(server);
 
 // Disable verbose mode for threaded processes
 if (cluster.isWorker) config.global.verbose = false;
@@ -33,7 +38,7 @@ if (cluster.isMaster) {
 
     //config.reload();
     //console.log(config);
-    //console.log(helpers.dateCookieString(255255255255));
+    console.log(server.helpers.dateCookieString(255255255255));
 
     // Fork workers.
     for (var i = 0; i < numCPUs; i++) {

@@ -1,7 +1,7 @@
 # angular-server
 The perfect angular server in nodejs
 
-## Not implemented:
+## To implement:
     * Live reload
     * SSL
     * SPDY
@@ -11,4 +11,5 @@ The perfect angular server in nodejs
     * Gracefull reload on config change
     * Sync sessions
     * Share mouse
+    * SenecaJS bindings to distribute requests over micro services
     

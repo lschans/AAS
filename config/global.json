@@ -1,7 +1,6 @@
 {
   "httpport"    : 80,
   "sslport"     : 443,
-  "devport"     : 8080,
   "livereload"  : 35729,
   "ip"          : [
                     "0.0.0.0",

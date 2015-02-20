@@ -24,6 +24,8 @@ if (cluster.isWorker) config.global.verbose = false;
 
 // Cluster the webserver over all CPU cores to be multi threaded
 if (cluster.isMaster) {
+    config.cluster = {};
+    config.cluster.workers = [];
     config.cluster.isMaster = true;
 
     // Master code, all this code will be executed once
@@ -39,10 +41,15 @@ if (cluster.isMaster) {
         config.cluster.workers[i] = cluster.fork();
     }
 
+    cluster.on('online', function (worker) {
+        console.log("Worker " + worker.process.pid + " responded and is online");
+    });
+
     // Exit function for the master process
-    cluster.on('exit', function(worker, code, signal) {
+    cluster.on('exit', function (worker, code, signal) {
         if (config.global.verbose === true) console.log('Worker ' + worker.process.pid + ' died');
     });
+
 } else {
     // Threaded code, all this code will be executed for each thread
 

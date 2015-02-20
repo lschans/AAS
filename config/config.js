@@ -2,6 +2,8 @@
  * config script for 'angular-server-with-sockets'
  *
  * Description:  Build the configuration object
+ * This file differs a bit in 'module-style' from the other modules.
+ * This is because we want to export an object and not a nested object
  *-----------------------------------------------------
  * Author: Lars van der Schans
  * Email:  lars@wodanbrothers.com

@@ -8,8 +8,6 @@
                     "127.0.0.1",
                     "localhost"
                   ],
-  "log"         : true,
-  "logfile"     : "./server.log",
   "verbose"     : true,
   "development" : "./development/",
   "production"  : "./production/",

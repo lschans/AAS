@@ -1,3 +1,5 @@
 {
-  "config": "text/html"
+  "config"  :   "Config files",
+  "cert"    :   "Certificate files",
+  "p12"     :   "Certificate files"
 }

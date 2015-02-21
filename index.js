@@ -14,14 +14,16 @@ global.console.log = require('eyes').inspector({maxLength: (1024 * 8)});
 var config = require('./config/config.js'),
     server = {},
     cluster = require('cluster'),
-    numCPUs = require('os').cpus().length,
-    mobileDetect = require('mobile-detect');
+    numCPUs = require('os').cpus().length;
 
+// Populate server object
 server.config = config;
 server.helpers = require('@dyflexis/server_helpers')(server);
 server.log = require('@dyflexis/logger')(server);
 server.user = require('@dyflexis/user')(server);
 server.session = require('@dyflexis/session')(server);
+server.cluster = {};
+
 
 // Disable verbose mode for threaded processes
 if (cluster.isWorker) config.global.verbose = false;
@@ -29,34 +31,43 @@ if (cluster.isWorker) config.global.verbose = false;
 
 // Cluster the webserver over all CPU cores to be multi threaded
 if (cluster.isMaster) {
-    config.cluster = {};
-    config.cluster.workers = [];
-    config.cluster.isMaster = true;
+
+    server.cluster.workers = [];
+    server.cluster.isMaster = true;
+    server.cluster.isWorker = false;
 
     // Master code, all this code will be executed once
     if (config.global.verbose === true) console.log(numCPUs + ' CPU\'s detected.');
 
     //config.reload();
     //console.log(config);
-    console.log(server.helpers.dateCookieString(255255255255));
+    console.log(server.helpers.dateCookieString(new Date().getTime()));
 
     // Fork workers.
     for (var i = 0; i < numCPUs; i++) {
         if (config.global.verbose === true) console.log('Forking worker process.');
-        config.cluster.workers[i] = cluster.fork();
+        server.cluster.workers[i] = cluster.fork();
     }
 
     cluster.on('online', function (worker) {
-        console.log("Worker " + worker.process.pid + " responded and is online");
+        // Do stuff when a worker comes online
+        server.log.writeLog({message:'online', domain:'worker', pid:worker.process.pid});
+        if (config.global.verbose === true) console.log("Worker " + worker.process.pid + " responded and is online");
     });
 
-    // Exit function for the master process
     cluster.on('exit', function (worker, code, signal) {
+        // Do stuff when a worker exits or dies
+        // TODO: Log exit code and message
+        server.log.writeLog({message:'died', domain:'worker', pid:worker.process.pid});
         if (config.global.verbose === true) console.log('Worker ' + worker.process.pid + ' died');
     });
 
+    console.log(server.cluster.workers);
+
 } else {
     // Threaded code, all this code will be executed for each thread
+    server.cluster.isMaster = true;
+    server.cluster.isWorker = false;
 
     // Process shutdown for
     process.on('message', function(msg) {

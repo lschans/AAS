@@ -1,5 +1,5 @@
 {
   "logType"     : "file",
   "logDir"      : "logs/",
-  "format"      : "@@_DATETIME_@@ @@_RESPONSECODE_@@ @@_PID_@@ @@_IP_@@ @@_URL_@@ @@_MESSAGE_@@"
+  "default"      : "@@_DATETIME_@@ @@_RESPONSECODE_@@ @@_PID_@@ @@_IP_@@ @@_URL_@@ @@_MESSAGE_@@"
 }

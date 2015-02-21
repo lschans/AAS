@@ -62,7 +62,7 @@ if (cluster.isMaster) {
         if (config.global.verbose === true) console.log('Worker ' + worker.process.pid + ' died');
     });
 
-    console.log(server.cluster.workers);
+    //console.log(server.cluster.workers);
 
 } else {
     // Threaded code, all this code will be executed for each thread

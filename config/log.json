@@ -1,5 +1,12 @@
 {
-  "logType"     : "file",
-  "logDir"      : "logs/",
-  "default"      : "@@_DATETIME_@@ @@_RESPONSECODE_@@ @@_PID_@@ @@_IP_@@ @@_URL_@@ @@_MESSAGE_@@"
+  "logType": "file",
+  "logDir": "logs/",
+  "default": "@@_DATETIME_@@ @@_RESPONSECODE_@@ @@_PID_@@ @@_IP_@@ @@_URL_@@ @@_MESSAGE_@@",
+  "definedFormats": {
+      "error": "@@_DATETIME_@@ @@_MESSAGE_@@",
+      "request": "@@_DATETIME_@@ @@_RESPONSECODE_@@ @@_IP_@@ @@_URL_@@",
+      "server": "@@_DATETIME_@@ @@_RESPONSECODE_@@ @@_MESSAGE_@@",
+      "session": "@@_DATETIME_@@ @@_IP_@@ @@_USER_@@ @@_UID_@@ @@_MESSAGE_@@",
+      "worker": "@@_DATETIME_@@ @@_PID_@@ @@_MESSAGE_@@"
+  }
 }

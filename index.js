@@ -25,10 +25,8 @@ server.user = require('@dyflexis/user')(server);
 server.session = require('@dyflexis/session')(server);
 server.cluster = {};
 
-
 // Disable verbose mode for threaded processes
 //if (cluster.isWorker) config.global.verbose = false;
-
 
 // Cluster the webserver over all CPU cores to be multi threaded
 if (cluster.isMaster) {
@@ -75,7 +73,7 @@ if (cluster.isMaster) {
     http.server(function(request, response){
         // Dummy response for now
         response.writeHead(200, { 'Content-Type': 'text/plain' });
-        response.write('request successfully proxied to: ' + request.url + '\n' + JSON.stringify(request.headers, true, 2));
+        response.write('request successfully handled: ' + request.url + '\n' + JSON.stringify(request.headers, true, 2));
         response.end();
     });
 

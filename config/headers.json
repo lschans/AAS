@@ -1,556 +1,556 @@
 {
-  "Accept":{
+  "Accept"          :   {
     "description"	:	"Content-Types that are acceptable for the response. See Content negotiation.",
     "example"	    :	"Accept: text/plain",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Accept-Charset":{
+  "Accept-Charset"  :   {
     "description"	:	"Character sets that are acceptable",
     "example"	    :	"Accept-Charset: utf-8",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Accept-Encoding":{
+  "Accept-Encoding" :   {
     "description"	:	"List of acceptable encodings. See HTTP compression.",
     "example"	    :	"Accept-Encoding: gzip, deflate",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Accept-Language":{
+  "Accept-Language" :   {
     "description"	:	"List of acceptable human languages for response. See Content negotiation.",
     "example"	    :	"Accept-Language: en-US",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Accept-Datetime":{
+  "Accept-Datetime" :   {
     "description"	:	"Acceptable version in time",
     "example"	    :	"Accept-Datetime: Thu, 31 May 2007 20:35:00 GMT",
     "status"	    :	"Provisional",
     "type"          :   "request"
   },
-  "Authorization":{
+  "Authorization"   :   {
     "description"	:	"Authentication credentials for HTTP authentication",
     "example"	    :	"Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Cache-Control":{
+  "Cache-Control"   :   {
     "description"	:	"Used to specify directives that must be obeyed by all caching mechanisms along the request-response chain",
     "example"	    :	"Cache-Control: no-cache",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Connection":{
+  "Connection"      :   {
     "description"	:	"Control options for the current connection and list of hop-by-hop request fields",
     "example"	    :	"Connection: keep-alive Connection: Upgrade",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Cookie":{
+  "Cookie"          :   {
     "description"	:	"An HTTP cookie previously sent by the server with Set-Cookie (below)",
     "example"	    :	"Cookie: $Version=1; Skin=new;",
     "status"	    :	"Permanent: standard",
     "type"          :   "request"
   },
-  "Content-Length":{
+  "Content-Length"  :   {
     "description"	:	"The length of the request body in octets (8-bit bytes)",
     "example"	    :	"Content-Length: 348",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Content-MD5":{
+  "Content-MD5"     :   {
     "description"	:	"A Base64-encoded binary MD5 sum of the content of the request body",
     "example"	    :	"Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Content-Type":{
+  "Content-Type"    :   {
     "description"	:	"The MIME type of the body of the request (used with POST and PUT requests)",
     "example"	    :	"Content-Type: application/x-www-form-urlencoded",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Date":{
+  "Date"            :   {
     "description"	:	"The date and time that the message was sent (in \"HTTP-date\" format as defined by RFC 7231 Date/Time Formats)",
     "example"	    :	"Date: Tue, 15 Nov 1994 08:12:31 GMT",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Expect":{
+  "Expect"          :   {
     "description"	:	"Indicates that particular server behaviors are required by the client",
     "example"	    :	"Expect: 100-continue",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "From":{
+  "From"            :   {
     "description"	:	"The email address of the user making the request",
     "example"	    :	"From: user@example.com",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Host":{
+  "Host"            :   {
     "description"	:	"The domain name of the server (for virtual hosting), and the TCP port number on which the server is listening. The port number may be omitted if the port is the standard port for the service requested.",
     "example"	    :	"Host: en.wikipedia.org:80",
     "status"	    :	"Permanent"
   },
-  "If-Match":{
+  "If-Match"        :   {
     "description"	:	"Only perform the action if the client supplied entity matches the same entity on the server. This is mainly for methods like PUT to only update a resource if it has not been modified since the user last updated it.",
     "example"	    :	"If-Match: \"737060cd8c284d8af7ad3082f209582d\"",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "If-Modified-Since":{
+  "If-Modified-Since":  {
     "description"	:	"Allows a 304 Not Modified to be returned if content is unchanged",
     "example"	    :	"If-Modified-Since: Sat, 29 Oct 1994 19:43:31 GMT",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "If-None-Match":{
+  "If-None-Match"   :   {
     "description"	:	"Allows a 304 Not Modified to be returned if content is unchanged, see HTTP ETag",
     "example"	    :	"If-None-Match: \"737060cd8c284d8af7ad3082f209582d\"",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "If-Range":{
+  "If-Range"        :   {
     "description"	:	"If the entity is unchanged, send me the part(s) that I am missing; otherwise, send me the entire new entity",
     "example"	    :	"If-Range: \"737060cd8c284d8af7ad3082f209582d\"",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "If-Unmodified-Since":{
+  "If-Unmodified-Since":    {
     "description"	:	"Only send the response if the entity has not been modified since a specific time.",
     "example"	    :	"If-Unmodified-Since: Sat, 29 Oct 1994 19:43:31 GMT",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Max-Forwards":{
+  "Max-Forwards"    :   {
     "description"	:	"Limit the number of times the message can be forwarded through proxies or gateways.",
     "example"	    :	"Max-Forwards: 10",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Origin":{
+  "Origin"          :   {
     "description"	:	"Initiates a request for cross-origin resource sharing (asks server for an 'Access-Control-Allow-Origin' response field) .",
     "example"	    :	"Origin: http://www.example-social-network.com",
     "status"	    :	"Permanent: standard",
     "type"          :   "request"
   },
-  "Pragma":{
+  "Pragma"          :   {
     "description"	:	"Implementation-specific fields that may have various effects anywhere along the request-response chain.",
     "example"	    :	"Pragma: no-cache",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Proxy-Authorization":{
+  "Proxy-Authorization":    {
     "description"	:	"Authorization credentials for connecting to a proxy.",
     "example"	    :	"Proxy-Authorization: Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ==",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Range":{
+  "Range"           :   {
     "description"	:	"Request only part of an entity. Bytes are numbered from 0. See Byte serving.",
     "example"	    :	"Range: bytes=500-999",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Referer":{
+  "Referer"         :   {
     "description"	:	"This is the address of the previous web page from which a link to the currently requested page was followed. (The word “referrer” has been misspelled in the RFC as well as in most implementations to the point that it has become standard usage and is considered correct terminology)",
     "example"	    :	"Referer: http://en.wikipedia.org/wiki/Main_Page",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "TE":{
+  "TE"              :   {
     "description"	:	"The transfer encodings the user agent is willing to accept: the same values as for the response header field Transfer-Encoding can be used, plus the \"trailers\" value (related to the \"chunked\" transfer method) to notify the server it expects to receive additional fields in the trailer after the last, zero-sized, chunk.",
     "example"	    :	"TE: trailers, deflate",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "User-Agent":{
+  "User-Agent"      :   {
     "description"	:	"The user agent string of the user agent",
     "example"	    :	"User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:12.0) Gecko/20100101 Firefox/21.0",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Upgrade":{
+  "Upgrade"         :   {
     "description"	:	"Ask the server to upgrade to another protocol.",
     "example"	    :	"Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "Via":{
+  "Via"             :   {
     "description"	:	"Informs the server of proxies through which the request was sent.",
     "example"	    :	"Via: 1.0 fred, 1.1 example.com (Apache/1.1)",
     "status"    	:	"Permanent",
     "type"          :   "request"
   },
-  "Warning":{
+  "Warning"         :   {
     "description"	:	"A general warning about possible problems with the entity body.",
     "example"	    :	"Warning: 199 Miscellaneous warning",
     "status"	    :	"Permanent",
     "type"          :   "request"
   },
-  "X-Requested-With":{
+  "X-Requested-With":   {
     "description"   :   "mainly used to identify Ajax requests. Most JavaScript frameworks send this field with value of XMLHttpRequest",
     "example"       :   "X-Requested-With: XMLHttpRequest",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "DNT":{
+  "DNT"             :   {
     "description"   :   "Requests a web application to disable their tracking of a user. This is Mozilla's version of the X-Do-Not-Track header field (since Firefox 4.0 Beta 11). Safari and IE9 also have support for this field.[11] On March 7, 2011, a draft proposal was submitted to IETF.[12] The W3C Tracking Protection Working Group is producing a specification.",
     "example"       :   "\"DNT: 1 (Do Not Track Enabled\", \"DNT: 0 (Do Not Track Disabled)\"",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "X-Forwarded-For":{
+  "X-Forwarded-For" :   {
     "description"   :   "a de facto standard for identifying the originating IP address of a client connecting to a web server through an HTTP proxy or load balancer",
     "example"       :   "X-Forwarded-For: client1, proxy1, proxy2 X-Forwarded-For: 129.78.138.66, 129.78.64.103",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "X-Forwarded-Host":{
+  "X-Forwarded-Host":   {
     "description"   :   "a de facto standard for identifying the original host requested by the client in the Host HTTP request header, since the host name and/or port of the reverse proxy (load balancer) may differ from the origin server handling the request.",
     "example"       :   "X-Forwarded-Host: en.wikipedia.org:80 \"X-Forwarded-Host: en.wikipedia.org\"",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "X-Forwarded-Proto":{
+  "X-Forwarded-Proto":  {
     "description"   :   "a de facto standard for identifying the originating protocol of an HTTP request, since a reverse proxy (load balancer) may communicate with a web server using HTTP even if the request to the reverse proxy is HTTPS. An alternative form of the header (X-ProxyUser-Ip) is used by Google clients talking to Google servers.",
     "example"       :   "X-Forwarded-Proto: https",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "Front-End-Https":{
+  "Front-End-Https" :   {
     "description"   :   "Non-standard header field used by Microsoft applications and load-balancers",
     "example"       :   "Front-End-Https: on",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "X-Http-Method-Override":{
+  "X-Http-Method-Override":   {
     "description"   :   "Requests a web application override the method specified in the request (typically POST) with the method given in the header field (typically PUT or DELETE). Can be used when a user agent or firewall prevents PUT or DELETE methods from being sent directly (note that this either a bug in the software component, which ought to be fixed, or an intentional configuration, in which case bypassing it may be the wrong thing to do).",
     "example"       :   "X-HTTP-Method-Override: DELETE",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "X-ATT-DeviceId":{
+  "X-ATT-DeviceId"  :   {
     "description"   :   "Allows easier parsing of the MakeModel/Firmware that is usually found in the User-Agent String of AT&T Devices",
     "example"       :   "X-Att-Deviceid: GT-P7320/P7320XXLPG",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "X-Wap-Profile":{
+  "X-Wap-Profile"   :   {
     "description"   :   "Links to an XML file on the Internet with a full description and details about the device currently connecting. In the example to the right is an XML file for an AT&T Samsung Galaxy S2.",
     "example"       :   "x-wap-profile: http://wap.samsungmobile.com/uaprof/SGH-I777.xml",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "Proxy-Connection":{
+  "Proxy-Connection":   {
     "description"   :   "Implemented as a misunderstanding of the HTTP specifications. Common because of mistakes in implementations of early HTTP versions. Has exactly the same functionality as standard Connection field.",
     "example"       :   "Proxy-Connection: keep-alive",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "X-UIDH":{
+  "X-UIDH"          :   {
     "description"   :   "Server-side deep packet insertion of an unique ID identifying customers of Verizon Wireless; also known as \"perma-cookie\" or \"supercookie\"",
     "example"       :   "X-UIDH: ...",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "X-Csrf-Token":{
+  "X-Csrf-Token"    :   {
     "description"   :   "Used to prevent cross-site request forgery. Alternative header names are: X-CSRFToken[26] and X-XSRF-TOKEN",
     "example"       :   "X-Csrf-Token: i8XNjC4b8KVok4uw5RftR38Wgp2BFwql",
     "status"	    :	"undefined",
     "type"          :   "request"
   },
-  "Access-Control-Allow-Origin":{
+  "Access-Control-Allow-Origin":    {
     "description"   :   "Specifying which web sites can participate in cross-origin resource sharing",
     "example"       :   "Access-Control-Allow-Origin: *",
     "status"        :   "Provisional",
     "type"          :   "response"
   },
-  "Accept-Patch":{
+  "Accept-Patch"    :   {
     "description"   :   "Specifies which patch document formats this server supports",
     "example"       :   "Accept-Patch: text/example;charset=utf-8",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Accept-Ranges":{
+  "Accept-Ranges"   :   {
     "description"   :   "What partial content range types this server supports",
     "example"       :   "Accept-Ranges: bytes",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Age":{
+  "Age"             :   {
     "description"   :   "The age the object has been in a proxy cache in seconds",
     "example"       :   "Age: 12",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Allow":{
+  "Allow"           :   {
     "description"   :   "Valid actions for a specified resource. To be used for a 405 Method not allowed",
     "example"       :   "Allow: GET, HEAD",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Cache-Control":{
+  "Cache-Control"   :   {
     "description"   :   "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds",
     "example"       :   "Cache-Control: max-age=3600",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Connection":{
+  "Connection"      :   {
     "description"   :   "Control options for the current connection and list of hop-by-hop response fields",
     "example"       :   "Connection: close",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Content-Encoding":{
+  "Content-Encoding":   {
     "description"   :   "The type of encoding used on the data. See HTTP compression.",
     "example"       :   "Content-Encoding: gzip",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Content-Language":{
+  "Content-Language":   {
     "description"   :   "The language the content is in",
     "example"       :   "Content-Language: da",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Content-Length":{
+  "Content-Length"  :   {
     "description"   :   "The length of the response body in octets (8-bit bytes)",
     "example"       :   "Content-Length: 348",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Content-Location":{
+  "Content-Location":   {
     "description"   :   "An alternate location for the returned data",
     "example"       :   "Content-Location: /index.htm",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Content-MD5":{
+  "Content-MD5"     :   {
     "description"   :   "A Base64-encoded binary MD5 sum of the content of the response",
     "example"       :   "Content-MD5: Q2hlY2sgSW50ZWdyaXR5IQ==",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Content-Disposition":{
+  "Content-Disposition":    {
     "description"   :   "An opportunity to raise a \"File Download\" dialogue box for a known MIME type with binary format or suggest a filename for dynamic content. Quotes are necessary with special characters.",
     "example"       :   "Content-Disposition: attachment; filename=\"fname.ext\"",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Content-Range":{
+  "Content-Range"   :   {
     "description"   :   "Where in a full body message this partial message belongs",
     "example"       :   "Content-Range: bytes 21010-47021/47022",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Content-Type":{
+  "Content-Type"    :   {
     "description"   :   "The MIME type of this content",
     "example"       :   "Content-Type: text/html; charset=utf-8",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Date":{
+  "Date"            :   {
     "description"   :   "The date and time that the message was sent (in \"HTTP-date\" format as defined by RFC 7231)",
     "example"       :   "Date: Tue, 15 Nov 1994 08:12:31 GMT",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "ETag":{
+  "ETag"            :   {
     "description"   :   "An identifier for a specific version of a resource, often a message digest",
     "example"       :   "ETag: \"737060cd8c284d8af7ad3082f209582d\"",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Expires":{
+  "Expires"         :   {
     "description"   :   "Gives the date/time after which the response is considered stale (in \"HTTP-date\" format as defined by RFC 7231)",
     "example"       :   "Expires: Thu, 01 Dec 1994 16:00:00 GMT",
     "status"        :   "Permanent: standard",
     "type"          :   "response"
   },
-  "Last-Modified":{
+  "Last-Modified"   :   {
     "description"   :   "The last modified date for the requested object (in \"HTTP-date\" format as defined by RFC 7231)",
     "example"       :   "Last-Modified: Tue, 15 Nov 1994 12:45:26 GMT",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Link":{
+  "Link"            :   {
     "description"   :   "Used to express a typed relationship with another resource, where the relation type is defined by RFC 5988",
     "example"       :   "Link: </feed>; rel=\"alternate\"",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Location":{
+  "Location"        :   {
     "description"   :   "Used in redirection, or when a new resource has been created.",
     "example"       :   "Location: http://www.w3.org/pub/WWW/People.html",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "P3P":{
+  "P3P"             :   {
     "description"   :   "This field is supposed to set P3P policy, in the form of P3P:CP=\"your_compact_policy\". However, P3P did not take off,[31] most browsers have never fully implemented it, a lot of websites set this field with fake policy text, that was enough to fool browsers the existence of P3P policy and grant permissions for third party cookies.",
     "example"       :   "P3P: CP=\"This is not a P3P policy! See http://www.google.com/support/accounts/bin/answer.py?hl=en&answer=151657 for more info.\"",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Pragma":{
+  "Pragma"          :   {
     "description"   :   "Implementation-specific fields that may have various effects anywhere along the request-response chain.",
     "example"       :   "Pragma: no-cache",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Proxy-Authenticate":{
+  "Proxy-Authenticate":   {
     "description"   :   "Request authentication to access the proxy.",
     "example"       :   "Proxy-Authenticate: Basic",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Refresh":{
+  "Refresh"         :   {
     "description"   :   "Used in redirection, or when a new resource has been created. This refresh redirects after 5 seconds.",
     "example"       :   "Refresh: 5; url=http://www.w3.org/pub/WWW/People.html",
     "status"        :   "Proprietary and non-standard: a header extension introduced by Netscape and supported by most web browsers.",
     "type"          :   "response"
   },
-  "Retry-After":{
+  "Retry-After"     :   {
     "description"   :   "If an entity is temporarily unavailable, this instructs the client to try again later. Value could be a specified period of time (in seconds) or a HTTP-date.",
     "example"       :   "Example 1: Retry-After: 120, Example 2: Retry-After: Fri, 07 Nov 2014 23:59:59 GMT",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Server":{
+  "Server"          :   {
     "description"   :   "A name for the server",
     "example"       :   "Server: Apache/2.4.1 (Unix)",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Set-Cookie":{
+  "Set-Cookie"      :   {
     "description"   :   "An HTTP cookie",
     "example"       :   "Set-Cookie: UserID=JohnDoe; Max-Age=3600; Version=1",
     "status"        :   "Permanent: standard",
     "type"          :   "response"
   },
-  "Status":{
+  "Status"          :   {
     "description"   :   "CGI header field specifying the status of the HTTP response. Normal HTTP responses use a separate \"Status-Line\" instead, defined by RFC 7230.",
     "example"       :   "Status: 200 OK",
     "status"        :   "Not listed as a registered field name",
     "type"          :   "response"
   },
-  "Strict-Transport-Security":{
+  "Strict-Transport-Security":    {
     "description"   :   "A HSTS Policy informing the HTTP client how long to cache the HTTPS only policy and whether this applies to subdomains.",
     "example"       :   "Strict-Transport-Security: max-age=16070400; includeSubDomains",
     "status"        :   "Permanent: standard",
     "type"          :   "response"
   },
-  "Trailer":{
+  "Trailer"         :   {
     "description"   :   "The Trailer general field value indicates that the given set of header fields is present in the trailer of a message encoded with chunked transfer coding.",
     "example"       :   "Trailer: Max-Forwards",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Transfer-Encoding":{
+  "Transfer-Encoding":    {
     "description"   :   "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity.",
     "example"       :   "Transfer-Encoding: chunked",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Upgrade":{
+  "Upgrade"         :   {
     "description"   :   "Ask the client to upgrade to another protocol.",
     "example"       :   "Upgrade: HTTP/2.0, SHTTP/1.3, IRC/6.9, RTA/x11",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Vary":{
+  "Vary"            :   {
     "description"   :   "Tells downstream proxies how to match future request headers to decide whether the cached response can be used rather than requesting a fresh one from the origin server.",
     "example"       :   "Vary: *",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Via":{
+  "Via"             :   {
     "description"   :   "Informs the client of proxies through which the response was sent.",
     "example"       :   "Via: 1.0 fred, 1.1 example.com (Apache/1.1)",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "Warning":{
+  "Warning"         :   {
     "description"   :   "A general warning about possible problems with the entity body.",
     "example"       :   "Warning: 199 Miscellaneous warning",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "WWW-Authenticate":{
+  "WWW-Authenticate":   {
     "description"   :   "Indicates the authentication scheme that should be used to access the requested entity.",
     "example"       :   "WWW-Authenticate: Basic",
     "status"        :   "Permanent",
     "type"          :   "response"
   },
-  "X-Frame-Options":{
+  "X-Frame-Options" :   {
     "description"   :   "Clickjacking protection: deny - no rendering within a frame, sameorigin - no rendering if origin mismatch, allow-from - allow from specified location, allowall - non-standard, allow from any location",
     "example"       :   "X-Frame-Options: deny",
     "status"        :   "Obsolete",
     "type"          :   "response"
   },
-  "Public-Key-Pins":{
+  "Public-Key-Pins" :   {
     "description"   :   "Man-in-the-middle attack mitigation, announces hash of website's authentic TLS certificate",
     "example"       :   "Public-Key-Pins: max-age=2592000; pin-sha256=\"E9CZ9INDbd+2eRQozYqqbQ2yXLVKB9+xcprMF+44U1g=\";",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "X-XSS-Protection":{
+  "X-XSS-Protection":   {
     "description"   :   "Cross-site scripting (XSS) filter",
     "example"       :   "X-XSS-Protection: 1; mode=block",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "Content-Security-Policy":{
+  "Content-Security-Policy":    {
     "description"   :   "Content Security Policy definition.",
     "example"       :   "Content-Security-Policy: default-src 'self'",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "X-Content-Security-Policy":{
+  "X-Content-Security-Policy":    {
     "description"   :   "Content Security Policy definition.",
     "example"       :   "X-Content-Security-Policy: default-src 'self'",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "X-WebKit-CSP":{
+  "X-WebKit-CSP"    :   {
     "description"   :   "Content Security Policy definition.",
     "example"       :   "X-WebKit-CSP: default-src 'self'",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "X-Content-Type-Options":{
+  "X-Content-Type-Options":   {
     "description"   :   "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type. This also applies to Google Chrome, when downloading extensions.",
     "example"       :   "X-Content-Type-Options: nosniff",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "X-Powered-By":{
+  "X-Powered-By"    :   {
     "description"   :   "specifies the technology (e.g. ASP.NET, PHP, JBoss) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)",
     "example"       :   "X-Powered-By: PHP/5.4.0",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "X-UA-Compatible":{
+  "X-UA-Compatible" :   {
     "description"   :   "Recommends the preferred rendering engine (often a backward-compatibility mode) to use to display the content. Also used to activate Chrome Frame in Internet Explorer.",
     "example"       :   "X-UA-Compatible: IE=EmulateIE7",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "X-UA-Compatible":{
+  "X-UA-Compatible" :   {
     "description"   :   "Recommends the preferred rendering engine (often a backward-compatibility mode) to use to display the content. Also used to activate Chrome Frame in Internet Explorer.",
     "example"       :   "IE=edge",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "X-UA-Compatible":{
+  "X-UA-Compatible" :   {
     "description"   :   "Recommends the preferred rendering engine (often a backward-compatibility mode) to use to display the content. Also used to activate Chrome Frame in Internet Explorer.",
     "example"       :   "Chrome=1",
     "status"        :   "undefined",
     "type"          :   "response"
   },
-  "X-Content-Duration":{
+  "X-Content-Duration":   {
     "description"   :   "Provide the duration of the audio or video in seconds; only supported by Gecko browsers",
     "example"       :   "X-Content-Duration: 42.666",
     "status"        :   "undefined",

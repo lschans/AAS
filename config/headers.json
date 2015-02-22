@@ -521,7 +521,7 @@
     "type"          :   "response"
   },
   "X-Content-Type-Options":{
-    "description"   :   "The only defined value, "nosniff", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type. This also applies to Google Chrome, when downloading extensions.",
+    "description"   :   "The only defined value, \"nosniff\", prevents Internet Explorer from MIME-sniffing a response away from the declared content-type. This also applies to Google Chrome, when downloading extensions.",
     "example"       :   "X-Content-Type-Options: nosniff",
     "status"        :   "undefined",
     "type"          :   "response"

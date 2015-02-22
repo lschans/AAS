@@ -14,7 +14,8 @@ global.console.log = require('eyes').inspector({maxLength: (1024 * 8)});
 var config = require('./config/config.js'),
     server = {},
     cluster = require('cluster'),
-    numCPUs = require('os').cpus().length;
+    numCPUs = require('os').cpus().length,
+    http;
 
 // Populate server object
 server.config = config;
@@ -26,7 +27,7 @@ server.cluster = {};
 
 
 // Disable verbose mode for threaded processes
-if (cluster.isWorker) config.global.verbose = false;
+//if (cluster.isWorker) config.global.verbose = false;
 
 
 // Cluster the webserver over all CPU cores to be multi threaded
@@ -47,6 +48,7 @@ if (cluster.isMaster) {
     for (var i = 0; i < numCPUs; i++) {
         if (config.global.verbose === true) console.log('Forking worker process.');
         server.cluster.workers[i] = cluster.fork();
+        server.cluster.workers[i].workerID = i;
     }
 
     cluster.on('online', function (worker) {
@@ -60,14 +62,22 @@ if (cluster.isMaster) {
         // TODO: Log exit code and message
         server.log.writeLog({message:'died', domain:'worker', pid:worker.process.pid});
         if (config.global.verbose === true) console.log('Worker ' + worker.process.pid + ' died');
+        // Restart the worker
+        server.cluster.workers[worker.workerID] = cluster.fork();
     });
-
-    //console.log(server.cluster.workers);
 
 } else {
     // Threaded code, all this code will be executed for each thread
     server.cluster.isMaster = true;
     server.cluster.isWorker = false;
+
+    http = require('@dyflexis/http-server')(server);
+    http.server(function(request, response){
+        // Dummy response for now
+        response.writeHead(200, { 'Content-Type': 'text/plain' });
+        response.write('request successfully proxied to: ' + request.url + '\n' + JSON.stringify(request.headers, true, 2));
+        response.end();
+    });
 
     // Process shutdown for
     process.on('message', function(msg) {

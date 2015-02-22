@@ -1,7 +1,7 @@
 {
-  "httpport"    : 80,
-  "sslport"     : 443,
-  "livereload"  : 35729,
+  "httpPort"    : 80,
+  "sslPort"     : 443,
+  "liveReload"  : 35729,
   "ip"          : [
                     "0.0.0.0",
                     "127.0.0.1",
@@ -10,9 +10,9 @@
   "verbose"     : true,
   "development" : "./development/",
   "production"  : "./production/",
-  "loginroot"   : "loginroot/",
-  "mobileroot"  : "mobileroot/",
-  "webroot"     : "webroot/",
+  "loginRoot"   : "loginroot/",
+  "mobileRoot"  : "mobileroot/",
+  "webRoot"     : "webroot/",
   "index"       : "index.html",
   "logout"      : "logout.html",
   "hiddenFiles" : false,

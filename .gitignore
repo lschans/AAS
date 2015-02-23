@@ -23,10 +23,19 @@ build/Release
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules/
-!node_modules/\@dyflexis/
-!node_modules/\@dyflexis/server_helpers
-!node_modules/\@dyflexis/session
-!node_modules/\@dyflexis/user
+!node_modules/\@dyflexis/http-server/
+!node_modules/\@dyflexis/https-server/
+!node_modules/\@dyflexis/live-reload/
+!node_modules/\@dyflexis/logger/
+!node_modules/\@dyflexis/parse-request/
+node_modules/\@dyflexis/parse-request/node_modules/
+!node_modules/\@dyflexis/server_helpers/
+!node_modules/\@dyflexis/session/
+!node_modules/\@dyflexis/socket-server/
+!node_modules/\@dyflexis/ssl-socket-server/
+!node_modules/\@dyflexis/template/
+!node_modules/\@dyflexis/user/
+
 
 # Users Environment Variables
 .lock-wscript

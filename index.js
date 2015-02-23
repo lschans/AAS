@@ -13,9 +13,11 @@ global.console.log = require('eyes').inspector({maxLength: (1024 * 8)});
 
 var config = require('./config/config.js'),
     server = {},
+    Q = require('q'),
     cluster = require('cluster'),
     numCPUs = require('os').cpus().length,
-    http;
+    http,
+    parseRequest;
 
 // Populate server object
 server.config = config;
@@ -28,8 +30,7 @@ server.cluster = {};
 // Disable verbose mode for threaded processes
 //if (cluster.isWorker) config.global.verbose = false;
 
-// Cluster the webserver over all CPU cores to be multi threaded
-if (cluster.isMaster) {
+var master = function() {
 
     server.cluster.workers = [];
     server.cluster.isMaster = true;
@@ -63,19 +64,50 @@ if (cluster.isMaster) {
         // Restart the worker
         server.cluster.workers[worker.workerID] = cluster.fork();
     });
+}
 
-} else {
+
+var worker = function () {
     // Threaded code, all this code will be executed for each thread
     server.cluster.isMaster = true;
     server.cluster.isWorker = false;
 
-    http = require('@dyflexis/http-server')(server);
-    http.server(function(request, response){
-        // Dummy response for now
-        response.writeHead(200, { 'Content-Type': 'text/plain' });
-        response.write('request successfully handled: ' + request.url + '\n' + JSON.stringify(request.headers, true, 2));
+    var form = function (request, response) {
+        response.body = '<form action="/" method="post">' +
+            '<fieldset>' +
+            '<legend>Personal information:</legend>' +
+            'First name:<br>' +
+            '<input type="text" name="firstname" value="Mickey">' +
+            '<br>' +
+            'Last name:<br>' +
+            '<input type="text" name="lastname" value="Mouse">' +
+            '<br><br>' +
+            '<input type="submit" value="Submit"></fieldset>' +
+            '</form><hr><pre>' + request.url + '\n' + JSON.stringify(request.headers, true, 2) + '</pre>';
+            return;
+    }
+
+    var write = function (request, response) {
+        response.writeHead(200, { 'Content-Type': 'text/html' });
+        response.write(response.body);
         response.end();
-    });
+    }
+
+    var respond = function (request, response) {
+        Q.fcall(parseRequest.getPost(request, response))
+            .then(form(request, response))
+            .then(write(request, response))
+            .catch(function (error) {
+                // Handle any error from all above steps
+                // And write to logger
+            })
+            .done();
+    }
+
+    http = require('@dyflexis/http-server')(server);
+    parseRequest = require('@dyflexis/parse-request')(server);
+
+    http.server(respond);
 
     // Process shutdown for
     process.on('message', function(msg) {
@@ -85,4 +117,7 @@ if (cluster.isMaster) {
     });
 }
 
+// Cluster the webserver over all CPU cores to be multi threaded
+if (cluster.isMaster) master();
+else worker();
 

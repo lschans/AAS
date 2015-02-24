@@ -72,8 +72,8 @@ var worker = function () {
     server.cluster.isMaster = true;
     server.cluster.isWorker = false;
 
-    var form = function (request, response) {
-        response.body = '<form action="/" method="post">' +
+    var form = function (request, response, callback) {
+        response.body = '<form action="/" method="POST">' +
             '<fieldset>' +
             '<legend>Personal information:</legend>' +
             'First name:<br>' +
@@ -83,30 +83,30 @@ var worker = function () {
             '<input type="text" name="lastname" value="Mouse">' +
             '<br><br>' +
             '<input type="submit" value="Submit"></fieldset>' +
-            '</form><hr><pre>' + request.url + '\n' + JSON.stringify(request.headers, true, 2) + '</pre>';
-            return;
+            '</form><hr>';;
+            callback(request, response);
     }
 
     var write = function (request, response) {
         response.writeHead(200, { 'Content-Type': 'text/html' });
-        response.write(response.body);
+        response.write(response.body + '<pre>' + request.url + '\n' + JSON.stringify(request.headers, true, 2) + '</pre>');
         response.end();
     }
 
     var respond = function (request, response) {
-        Q.fcall(parseRequest.getPost(request, response))
-            .then(form(request, response))
-            .then(write(request, response))
-            .catch(function (error) {
-                // Handle any error from all above steps
-                // And write to logger
-            })
-            .done();
+        // Queue up all functions
+        funcArray = [
+            form,
+            parseRequest.getPost,
+            parseRequest.getGet,
+            write
+        ];
+
+        server.helpers.syncIt(request, response, funcArray);
     }
 
-    http = require('@dyflexis/http-server')(server);
     parseRequest = require('@dyflexis/parse-request')(server);
-
+    http = require('@dyflexis/http-server')(server);
     http.server(respond);
 
     // Process shutdown for

@@ -95,16 +95,88 @@ var worker = function () {
     }
 
     var respond = function (request, response) {
+        // Clone array because we don't want to rommel the master object
+        var seqArr = sequences[request.method.toUpperCase()].slice(0);
         server.helpers.syncIt(
             request,
             response,
-            server.config.httpMethods[request.method].sequence
+            seqArr
         );
     }
 
     parseRequest = require('@dyflexis/parse-request')(server);
     debugInfo = require('@dyflexis/header-debug')(server);
     http = require('@dyflexis/http-server')(server);
+
+    var sequences = {};
+    sequences.POST = [
+        form,
+        parseRequest.getPost,
+        debugInfo.addInfo,
+        write
+    ];
+    sequences.GET = [
+        form,
+        parseRequest.getGet,
+        debugInfo.addInfo,
+        write
+    ];
+    sequences.PUT = [
+        form,
+        parseRequest.getPost,
+        parseRequest.getGet,
+        debugInfo.addInfo,
+        write
+    ];
+    sequences.DELETE = [
+        form,
+        parseRequest.getPost,
+        parseRequest.getGet,
+        debugInfo.addInfo,
+        write
+    ];
+    sequences.OPTIONS = [
+        form,
+        parseRequest.getPost,
+        parseRequest.getGet,
+        debugInfo.addInfo,
+        write
+    ];
+    sequences.HEAD = [
+        form,
+        parseRequest.getPost,
+        parseRequest.getGet,
+        debugInfo.addInfo,
+        write
+    ];
+    sequences.TRACE = [
+        form,
+        parseRequest.getPost,
+        parseRequest.getGet,
+        debugInfo.addInfo,
+        write
+    ];
+    sequences.CONNECT = [
+        form,
+        parseRequest.getPost,
+        parseRequest.getGet,
+        debugInfo.addInfo,
+        write
+    ];
+    sequences.PATCH = [
+        form,
+        parseRequest.getPost,
+        parseRequest.getGet,
+        debugInfo.addInfo,
+        write
+    ];
+    sequences.UNDEFINED = [
+        form,
+        parseRequest.getPost,
+        parseRequest.getGet,
+        debugInfo.addInfo,
+        write
+    ];
     http.server(respond);
 
     // Process shutdown for

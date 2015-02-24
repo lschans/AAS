@@ -16,8 +16,7 @@ var config = require('./config/config.js'),
     Q = require('q'),
     cluster = require('cluster'),
     numCPUs = require('os').cpus().length,
-    http,
-    parseRequest;
+    http, parseRequest, debugInfo;
 
 // Populate server object
 server.config = config;
@@ -73,7 +72,7 @@ var worker = function () {
     server.cluster.isWorker = false;
 
     var form = function (request, response, callback) {
-        response.body = '<form action="/" method="POST">' +
+        response.body = '<form action="/" id="myForm">' +
             '<fieldset>' +
             '<legend>Personal information:</legend>' +
             'First name:<br>' +
@@ -82,14 +81,16 @@ var worker = function () {
             'Last name:<br>' +
             '<input type="text" name="lastname" value="Mouse">' +
             '<br><br>' +
-            '<input type="submit" value="Submit"></fieldset>' +
+        '<button onclick=\'myform = document.getElementById("myForm"); myform.method = "post"; myform.submit();\'>POST</button>' +
+        '<button onclick=\'myform = document.getElementById("myForm"); myform.method = "get"; myform.submit();\'>GET</button>' +
+            '</fieldset>' +
             '</form><hr>';;
             callback(request, response);
     }
 
     var write = function (request, response) {
         response.writeHead(200, { 'Content-Type': 'text/html' });
-        response.write(response.body + '<pre>' + request.url + '\n' + JSON.stringify(request.headers, true, 2) + '</pre>');
+        response.write(response.body);
         response.end();
     }
 
@@ -99,6 +100,7 @@ var worker = function () {
             form,
             parseRequest.getPost,
             parseRequest.getGet,
+            debugInfo.addInfo,
             write
         ];
 
@@ -106,6 +108,7 @@ var worker = function () {
     }
 
     parseRequest = require('@dyflexis/parse-request')(server);
+    debugInfo = require('@dyflexis/header-debug')(server);
     http = require('@dyflexis/http-server')(server);
     http.server(respond);
 

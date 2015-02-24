@@ -95,16 +95,11 @@ var worker = function () {
     }
 
     var respond = function (request, response) {
-        // Queue up all functions
-        funcArray = [
-            form,
-            parseRequest.getPost,
-            parseRequest.getGet,
-            debugInfo.addInfo,
-            write
-        ];
-
-        server.helpers.syncIt(request, response, funcArray);
+        server.helpers.syncIt(
+            request,
+            response,
+            server.config.httpMethods[request.method].sequence
+        );
     }
 
     parseRequest = require('@dyflexis/parse-request')(server);

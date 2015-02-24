@@ -16,5 +16,6 @@
   "index"       : "index.html",
   "logout"      : "logout.html",
   "hiddenFiles" : false,
-  "cache"       : true
+  "cache"       : true,
+  "useSPDY"       : true
 }

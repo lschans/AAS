@@ -89,8 +89,11 @@ var worker = function () {
     parseRequest = require('@dyflexis/parse-request')(server);
     debugInfo = require('@dyflexis/header-debug')(server);
     http = require('@dyflexis/http-server')(server);
-    https = require('@dyflexis/https-server')(server);
-
+    if(config.global.useSPDY == true) {
+        https = require('@dyflexis/spdy-server')(server);
+    } else {
+        https = require('@dyflexis/https-server')(server);
+    }
     var sequences = {};
     sequences.POST = [
         debugInfo.addForm,

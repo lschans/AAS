@@ -36,6 +36,7 @@ node_modules/\@dyflexis/parse-request/node_modules/
 !node_modules/\@dyflexis/template/
 !node_modules/\@dyflexis/user/
 
+certs/
 
 # Users Environment Variables
 .lock-wscript

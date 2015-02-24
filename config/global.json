@@ -1,6 +1,6 @@
 {
   "httpPort"    : 80,
-  "sslPort"     : 443,
+  "httpsPort"     : 443,
   "liveReload"  : 35729,
   "ip"          : [
                     "0.0.0.0",

@@ -13,10 +13,9 @@ global.console.log = require('eyes').inspector({maxLength: (1024 * 8)});
 
 var config = require('./config/config.js'),
     server = {},
-    Q = require('q'),
     cluster = require('cluster'),
     numCPUs = require('os').cpus().length,
-    http, parseRequest, debugInfo;
+    http, https, parseRequest, debugInfo;
 
 // Populate server object
 server.config = config;
@@ -71,23 +70,6 @@ var worker = function () {
     server.cluster.isMaster = true;
     server.cluster.isWorker = false;
 
-    var form = function (request, response, callback) {
-        response.body = '<form action="/" id="myForm">' +
-            '<fieldset>' +
-            '<legend>Personal information:</legend>' +
-            'First name:<br>' +
-            '<input type="text" name="firstname" value="Mickey">' +
-            '<br>' +
-            'Last name:<br>' +
-            '<input type="text" name="lastname" value="Mouse">' +
-            '<br><br>' +
-        '<button onclick=\'myform = document.getElementById("myForm"); myform.method = "post"; myform.submit();\'>POST</button>' +
-        '<button onclick=\'myform = document.getElementById("myForm"); myform.method = "get"; myform.submit();\'>GET</button>' +
-            '</fieldset>' +
-            '</form><hr>';;
-            callback(request, response);
-    }
-
     var write = function (request, response) {
         response.writeHead(200, { 'Content-Type': 'text/html' });
         response.write(response.body);
@@ -107,77 +89,80 @@ var worker = function () {
     parseRequest = require('@dyflexis/parse-request')(server);
     debugInfo = require('@dyflexis/header-debug')(server);
     http = require('@dyflexis/http-server')(server);
+    https = require('@dyflexis/https-server')(server);
 
     var sequences = {};
     sequences.POST = [
-        form,
+        debugInfo.addForm,
         parseRequest.getPost,
         debugInfo.addInfo,
         write
     ];
     sequences.GET = [
-        form,
+        debugInfo.addForm,
         parseRequest.getGet,
         debugInfo.addInfo,
         write
     ];
     sequences.PUT = [
-        form,
+        debugInfo.addForm,
         parseRequest.getPost,
         parseRequest.getGet,
         debugInfo.addInfo,
         write
     ];
     sequences.DELETE = [
-        form,
+        debugInfo.addForm,
         parseRequest.getPost,
         parseRequest.getGet,
         debugInfo.addInfo,
         write
     ];
     sequences.OPTIONS = [
-        form,
+        debugInfo.addForm,
         parseRequest.getPost,
         parseRequest.getGet,
         debugInfo.addInfo,
         write
     ];
     sequences.HEAD = [
-        form,
+        debugInfo.addForm,
         parseRequest.getPost,
         parseRequest.getGet,
         debugInfo.addInfo,
         write
     ];
     sequences.TRACE = [
-        form,
+        debugInfo.addForm,
         parseRequest.getPost,
         parseRequest.getGet,
         debugInfo.addInfo,
         write
     ];
     sequences.CONNECT = [
-        form,
+        debugInfo.addForm,
         parseRequest.getPost,
         parseRequest.getGet,
         debugInfo.addInfo,
         write
     ];
     sequences.PATCH = [
-        form,
+        debugInfo.addForm,
         parseRequest.getPost,
         parseRequest.getGet,
         debugInfo.addInfo,
         write
     ];
     sequences.UNDEFINED = [
-        form,
+        debugInfo.addForm,
         parseRequest.getPost,
         parseRequest.getGet,
         debugInfo.addInfo,
         write
     ];
+
     http.server(respond);
+    https.server(respond);
 
     // Process shutdown for
     process.on('message', function(msg) {

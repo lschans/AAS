@@ -1,6 +1,6 @@
 {
   "httpPort"    : 80,
-  "httpsPort"     : 443,
+  "httpsPort"   : 443,
   "liveReload"  : 35729,
   "ip"          : [
                     "0.0.0.0",
@@ -8,6 +8,7 @@
                     "localhost"
                   ],
   "verbose"     : true,
+  "forceHTTPS"  : false,
   "development" : "./development/",
   "production"  : "./production/",
   "loginRoot"   : "loginroot/",
@@ -17,5 +18,5 @@
   "logout"      : "logout.html",
   "hiddenFiles" : false,
   "cache"       : true,
-  "useSPDY"       : true
+  "useSPDY"     : true
 }

@@ -3,8 +3,6 @@ The perfect angular server in nodejs
 
 ## To implement:
     * Live reload
-    * SSL
-    * SPDY
     * Redis sockets
     * Mongo distributed sessions
     * Client list
@@ -12,4 +10,6 @@ The perfect angular server in nodejs
     * Sync sessions
     * Share mouse
     * SenecaJS bindings to distribute requests over micro services
+    * Browser fingerprinting
+    * Status like 429 overloaded and so on
     

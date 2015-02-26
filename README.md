@@ -1,6 +1,9 @@
 # angular-server
 The perfect angular server in nodejs
 
+## TODO
+    * Finish delete cookie etc.
+
 ## To implement:
     * Live reload
     * Redis sockets

@@ -1,0 +1,40 @@
+<!--
+ * login page
+ *
+ * Description:  A simple login page to test the server
+ *-----------------------------------------------------
+ * Author: Lars van der Schans
+ * Email:  lars@wodanbrothers.com
+ *-----------------------------------------------------
+ -->
+<!doctype html>
+<html>
+    <head>
+        <style>
+            fieldset {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <fieldset>
+                <legend>Login</legend>
+                <form action="/" id="myForm">
+                    <label for="name">USERNAME:</label>
+                    <input id="name" type="text" name="name" value="Admin">
+                    <br>
+                    <label for="password">PASSWORD:</label>
+                    <input id="password" type="password" name="password" value="adminpass">
+                    <br>
+                    <button onclick='
+                            var myForm = document.getElementById("myForm");
+                            myForm.method = "post";
+                            myform.submit();
+                        '>LOGIN
+                    </button>
+                </form>
+            </fieldset>
+        </div>
+    </body>
+</html>

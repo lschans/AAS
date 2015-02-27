@@ -1,16 +1,16 @@
 {
-  "html"    : "text/html",
-  "css"     : "text/css",
-  "js"      : "text/javascript",
-  "json"    : "application/json",
+  "html"    : "text/html; @@_CHARSET_@@",
+  "css"     : "text/css;  @@_CHARSET_@@",
+  "js"      : "text/javascript;  @@_CHARSET_@@",
+  "json"    : "application/json;  @@_CHARSET_@@",
   "oga"     : "audio/ogg",
   "ogv"     : "video/ogg",
   "ogg"     : "application/ogg",
-  "txt"     : "text/plain",
+  "txt"     : "text/plain;  @@_CHARSET_@@",
   "jpeg"    : "image/jpeg",
   "jpg"     : "image/jpeg",
   "png"     : "image/png",
   "gif"     : "image/gif",
   "ico"     : "image/x-icon",
-  "appcache": "text/cache-manifest"
+  "appcache": "text/cache-manifest;  @@_CHARSET_@@"
 }

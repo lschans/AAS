@@ -2,7 +2,8 @@
 The perfect angular server in nodejs
 
 ## TODO
-    * Finish delete cookie etc.
+    * Finish delete cookie
+    * Fix cookies with dates and stuff.
 
 ## To implement:
     * Live reload

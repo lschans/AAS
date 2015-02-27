@@ -35,6 +35,7 @@ node_modules/
 !node_modules/\@dyflexis/server-helpers/
 !node_modules/\@dyflexis/server-info/
 !node_modules/\@dyflexis/session/
+!node_modules/\@dyflexis/serve/
 !node_modules/\@dyflexis/socket-server/
 !node_modules/\@dyflexis/spdy-server
 !node_modules/\@dyflexis/ssl-socket-server/
@@ -45,7 +46,7 @@ node_modules/
 node_modules/\@dyflexis/client-info/node_modules/
 node_modules/\@dyflexis/parse-request/node_modules/
 node_modules/\@dyflexis/spdy-server/node_modules/
-
+node_modules/\@dyflexis/serve/node_modules/
 
 certs/
 

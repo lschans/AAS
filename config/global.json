@@ -18,6 +18,6 @@
   "logout"      : "logout.html",
   "hiddenFiles" : false,
   "cache"       : true,
-  "useSPDY"     : true,
+  "useSPDY"     : false,
   "X-Powered-By": "Awesome Angular Server (AAS)"
 }

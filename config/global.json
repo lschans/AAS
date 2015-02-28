@@ -7,6 +7,10 @@
                     "127.0.0.1",
                     "localhost"
                   ],
+  "domains"     : [
+                    "localhost",
+                    "testdomain.nl"
+                  ],
   "verbose"     : true,
   "forceHTTPS"  : false,
   "development" : "./development/",

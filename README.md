@@ -7,6 +7,7 @@ The perfect angular server in nodejs
 
 ## To implement:
     * Live reload
+    * OTAP folder structure - Change OTAB by headers
     * Redis sockets
     * Mongo distributed sessions
     * Client list

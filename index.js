@@ -9,7 +9,7 @@
  */
 
 // Pretty the console output so eyes won't be hurt
-global.console.log = require('eyes').inspector({maxLength: (1024 * 8)});
+global.console.log = require('eyes').inspector({maxLength: (1024 * 16)});
 
 var config = require('./config/config.js'),
     server = {},

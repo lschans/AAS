@@ -24,6 +24,8 @@ server.user = require('@dyflexis/user')(server);
 server.session = require('@dyflexis/session')(server);
 server.cluster = {};
 
+//server.helpers.testFiles();
+
 // Cluster the webserver over all CPU cores to be multi threaded
 if (cluster.isMaster) {
     processType = require('@dyflexis/master-proc')(server, cluster).execute();

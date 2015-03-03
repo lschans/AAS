@@ -19,6 +19,7 @@ var config = require('./config/config.js'),
 // Populate server object
 server.config = config;
 server.helpers = require('@dyflexis/server-helpers')(server);
+server.config.network = server.helpers.serverNICs();
 server.log = require('@dyflexis/logger')(server);
 server.user = require('@dyflexis/user')(server);
 server.session = require('@dyflexis/session')(server);

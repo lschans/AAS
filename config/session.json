@@ -1,0 +1,6 @@
+{
+  "database"    :   "angularServer",
+  "collection"  :   "sessions",
+  "mongoHost"   :   "localhost",
+  "mongoPort"   :   "27017"
+}

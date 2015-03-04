@@ -1,0 +1,34 @@
+fieldset {
+    margin:5px;
+    border-color:#F00
+}
+
+.center {
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin:-50px 0 0 -125px
+}
+
+.loginbox {
+    height: 110px;
+    width:  250px;
+}
+
+.textcenter {
+    width: 100%;
+    text-align:center
+}
+
+input, button {
+    margin:5px 5px 5px 5px;
+}
+
+input[type="text"], input[type="password"], textarea {
+    background-color : #ddd;
+}
+
+html{
+    background-color:#000;
+    color:#0F0
+}

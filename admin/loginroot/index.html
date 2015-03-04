@@ -1,7 +1,7 @@
 <!--
  * login page
  *
- * Description:  A simple login page to test the server
+ * Description:  A simple login page for the server admin pages
  *-----------------------------------------------------
  * Author: Lars van der Schans
  * Email:  lars@wodanbrothers.com
@@ -10,29 +10,29 @@
 <!doctype html>
 <html>
     <head>
-        <style>
-            fieldset {
-                margin: 5px;
+        <link href="css/main.css" rel="stylesheet">
+        <script>
+            function submitForm(){
+                var myForm = document.getElementById("myForm");
+                myForm.method = "post";
+                myForm.submit();
             }
-        </style>
+        </script>
     </head>
     <body>
         <div>
-            <fieldset>
-                <legend>Login</legend>
+            <fieldset class="center loginbox">
+                <legend>LOGIN</legend>
+                <span class="textcenter">@@_LOGIN_MESSAGE_@@</span>
                 <form action="/" id="myForm">
                     <label for="name">USERNAME:</label>
-                    <input id="name" type="text" name="name" value="Admin">
+                    <input id="name" type="text" name="name" value="admin">
                     <br>
                     <label for="password">PASSWORD:</label>
                     <input id="password" type="password" name="password" value="adminpass">
                     <br>
-                    <button onclick='
-                            var myForm = document.getElementById("myForm");
-                            myForm.method = "post";
-                            myform.submit();
-                        '>LOGIN
-                    </button>
+                    <input type="hidden" name="command" value="login">
+                    <button onclick='submitForm()'>LOGIN</button>
                 </form>
             </fieldset>
         </div>

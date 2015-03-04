@@ -7,11 +7,12 @@ The perfect angular server in nodejs
 
 ## To implement:
     * Live reload
-    * OTAP folder structure - Change OTAB by headers
+    * Better graceful reload
+    * DTAP folder structure - Change DTAP by headers
     * Redis sockets
     * Mongo distributed sessions
     * Client list
-    * Gracefull reload on config change
+    * Graceful reload on config change
     * Sync sessions
     * Share mouse
     * SenecaJS bindings to distribute requests over micro services

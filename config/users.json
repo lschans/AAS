@@ -1,14 +1,20 @@
-[
-  {
+{
+  "guest": {
     "uid":"0",
+    "name":"guest",
+    "pass":"none",
+    "nick":"guest"
+  },
+  "admin": {
+    "uid":"1",
     "name":"admin",
     "pass":"test",
     "nick":"sysop"
   },
-  {
-    "uid":"1",
+  "user": {
+    "uid":"2",
     "name":"user",
     "pass":"test",
     "nick":"user"
   }
-]
+}

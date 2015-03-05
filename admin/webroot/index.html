@@ -10,14 +10,47 @@
 <!doctype html>
 <html>
     <head>
+        <title>Admin Angular Server</title>
+
+        <!-- Favicon stuff -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+        <!-- All the bower components, use as much bower as posible -->
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="bower_components/html5shiv/dist/html5shiv.min.js"></script>
+        <script src="bower_components/respond/dest/respond.min.js"></script>
+        <![endif]-->
+
+        <!-- The stylez -->
         <link href="css/main.css" rel="stylesheet">
+
     </head>
-    <body>
-        <div>
-            <fieldset>
-                <legend>Website</legend>
-                <span>You are in the webroot</span>
-            </fieldset>
-        </div>
+    <body ng-app="aas">
+        <fieldset class="header">
+            <span>AAS (Awesome Angular Server) - v@@_VERSION_@@ - git:@@_COMMIT_@@</span>
+        </fieldset>
+        <fieldset class="menuCol">
+            <ol>
+                <li><a href="#">BUTTON 1</a></li>
+                <li><a href="#">BUTTON 2</a></li>
+                <li><a href="#">BUTTON 3</a></li>
+                <li><a href="#">BUTTON 4</a></li>
+                <li><a href="#">BUTTON 5</a></li>
+                <li><a href="#">BUTTON 6</a></li>
+            </ol>
+        </fieldset>
+        <fieldset class="mainCol mainColHeight">
+            bla 2
+        </fieldset>
+        <div class="clear"></div>
+        <fieldset class="footer">
+            <span>footer</span>
+        </fieldset>
     </body>
 </html>

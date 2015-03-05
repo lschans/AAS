@@ -1,6 +1,6 @@
 fieldset {
-    margin:5px;
-    border-color:#F00
+    margin:1px;
+    border-color:#F00;
 }
 
 .center {
@@ -13,6 +13,14 @@ fieldset {
 .loginbox {
     height: 110px;
     width:  250px;
+    border-color: #00F;
+}
+
+.separator {
+    height: 1px;
+    color: #00F;
+    background-color: #00F;
+    border: none;
 }
 
 .textcenter {
@@ -20,15 +28,83 @@ fieldset {
     text-align:center
 }
 
-input, button {
-    margin:5px 5px 5px 5px;
+input {
+    margin:2px 2px 2px 2px;
+}
+
+button {
+    margin:2px 2px 2px 2px;
+    background-color: #000;
+    color:#0F0;
 }
 
 input[type="text"], input[type="password"], textarea {
-    background-color : #ddd;
+    background-color: transparent;
+    border-color: #444;
+    color:#0F0;
 }
 
 html{
     background-color:#000;
-    color:#0F0
+    color:#0F0;
+}
+
+body {
+    height: 98vh;
+    width: calc(100% - 10px);
+}
+
+.menuCol{
+    float:left;
+    width:180px;
+    height: calc(100% - 110px);
+    border-color:#00F;
+    margin:1px;
+    margin-top: 0px;
+}
+
+.mainColHeight {
+    height: calc(100% - 110px);
+}
+
+@media screen and (max-width: 400px) {
+    .mainCol {
+        float: none;
+        width:auto;
+        height: auto;
+    }
+}
+
+.footer {
+    height: 25px;
+    width: auto;
+}
+
+.header {
+    height: 25px;
+    width: auto;
+}
+
+.clear{
+    clear: both;
+}
+
+ol{
+    list-style-type:none;
+    margin: 1px;
+    padding: 0px;
+    float: left;
+}
+
+ol a {
+    color:#0F0;
+}
+
+ol li a {
+    display:block;
+    width: 178px;
+}
+ol li a:hover {
+    background:#ddd;
+    color:#888
 }

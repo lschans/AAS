@@ -19,6 +19,11 @@
         <!-- All the bower components, use as much bower as posible -->
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
 
+        <!-- The angular app and controllers -->
+        <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script type="text/javascript" src="app/app.js"></script>
+        <script type="text/javascript" src="app/controllers/nav-controller.js"></script>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -31,22 +36,16 @@
         <link href="css/main.css" rel="stylesheet">
 
     </head>
-    <body ng-app="aas">
+    <body ng-app="aasAdmin">
         <fieldset class="header">
             <span>AAS (Awesome Angular Server) - v@@_VERSION_@@ - git:@@_COMMIT_@@</span>
         </fieldset>
-        <fieldset class="menuCol">
-            <ol>
-                <li><a href="#">BUTTON 1</a></li>
-                <li><a href="#">BUTTON 2</a></li>
-                <li><a href="#">BUTTON 3</a></li>
-                <li><a href="#">BUTTON 4</a></li>
-                <li><a href="#">BUTTON 5</a></li>
-                <li><a href="#">BUTTON 6</a></li>
-            </ol>
+        <fieldset class="menuCol" ui-view="navigation">
         </fieldset>
         <fieldset class="mainCol mainColHeight">
-            bla 2
+            <div class="container">
+                <div ui-view="main"></div>
+            </div>
         </fieldset>
         <div class="clear"></div>
         <fieldset class="footer">

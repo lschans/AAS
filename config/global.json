@@ -23,5 +23,7 @@
   "hiddenFiles" : false,
   "cache"       : true,
   "useSPDY"     : false,
-  "X-Powered-By": "Awesome Angular Server (AAS)"
+  "X-Powered-By": "Awesome Angular Server (AAS)",
+  "redisServer" : "localhost",
+  "redisPort"   : 6379
 }

@@ -27,11 +27,11 @@ server.session = require('@dyflexis/session')(server);
 server.cluster = {};
 
 // Require socket.io 2x both for ssl and plain and distribute them over redis
-// TODO: Make redis config a config
 server.httpSocket = require('socket.io');
 server.httpsSocket = require('socket.io');
-server.redis = require('socket.io-redis');
 
+// Add redis transport to the server
+server.redis = require('socket.io-redis');
 
 //server.helpers.testFiles();
 

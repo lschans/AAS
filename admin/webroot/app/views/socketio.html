@@ -1,31 +1,49 @@
 <script>
     $(function(){
+        // Crapped for test chat example using the sockets
         var iosocket = io.connect();
+
+        var chatSubmit = function(){
+            iosocket.send($('#outgoingChatMessage').val());
+            $('#incomingChatMessages').append($('<li></li>').text($('#outgoingChatMessage').val()));
+            $('#outgoingChatMessage').val('');
+            $("#scrollContainer").scrollTop($("#scrollContainer")[0].scrollHeight);
+        }
+
         iosocket.on('connect', function () {
-            $('#incomingChatMessages').append($('<li>Connected</li>'));
+            $('#incomingChatMessages').append($('<li class="serverMsg">Connected to server</li>'));
+            $("#scrollContainer").scrollTop($("#scrollContainer")[0].scrollHeight);
             iosocket.on('message', function(message) {
                 $('#incomingChatMessages').append($('<li></li>').text(message));
                 $("#scrollContainer").scrollTop($("#scrollContainer")[0].scrollHeight);
             });
             iosocket.on('disconnect', function() {
-                $('#incomingChatMessages').append('<li>Disconnected</li>');
+                $('#incomingChatMessages').append('<liclass="serverErr">Disconnected from server</li>');
+                $("#scrollContainer").scrollTop($("#scrollContainer")[0].scrollHeight);
             });
+        });
+
+        $('#chatSubmit').click(function(){
+            chatSubmit();
         });
 
         $('#outgoingChatMessage').keypress(function(event) {
             if(event.which == 13) {
                 event.preventDefault();
-                iosocket.send($('#outgoingChatMessage').val());
-                $('#incomingChatMessages').append($('<li></li>').text($('#outgoingChatMessage').val()));
-                $('#outgoingChatMessage').val('');
+                chatSubmit();
             }
         });
     });
 </script>
-<div class="chat">
-    <span>Incoming Chat: </span>
-    <div id="scrollContainer" class="scrollContainer">
-        <ul id="incomingChatMessages"></ul>
+<fieldset class="window">
+    <legend class="windowLegend">CHAT EXAMPLE</legend>
+    <div class="chat">
+        <span>Incoming Chat: </span>
+        <div id="scrollContainer" class="scrollContainer">
+            <ul id="incomingChatMessages"></ul>
+        </div>
+        <div class="chatControl">
+            <span class="messageLabel">Message: </span><input type="text" id="outgoingChatMessage"><button id="chatSubmit">SUBMIT</button>
+        </div>
     </div>
-    <input type="text" id="outgoingChatMessage">
-</div>
+</fieldset>

@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "graffiti";
+    src: url('graffiti.ttf');
+    format('truetype');
+    font-weight:bold;
+    font-style:normal;
+}
+
 *:focus {
     outline: 0;
 }
@@ -7,6 +15,25 @@ fieldset {
     border-color:#F00;
     border-style: solid;
     border-width: 3px;
+}
+
+.window {
+    moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-color:#0F0;
+    border-style: solid;
+    border-width: 1px;
+    margin-top: 15px;
+}
+
+.windowLegend {
+    float: right;
+    moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-width: 1px;
+    border-style: solid;
+    margin-top: -20px;
+    background-color: #000;
 }
 
 .separator {
@@ -63,6 +90,7 @@ body {
     height: 98vh;
     width: calc(100% - 10px);
     font-family: 'Gloria Hallelujah', cursive;
+    font-size: 13px;
 }
 
 .loginButton{
@@ -88,6 +116,7 @@ body {
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .loginBoxCenter {
@@ -124,6 +153,31 @@ body {
 
 }
 
+.graffitiGreen {
+    font-family: graffiti;
+    color: #0f0;
+}
+
+.graffitiBlue {
+    font-family: graffiti;
+    color:#00f;
+}
+
+.graffitiRed {
+    font-family: graffiti;
+    color:#f00;
+}
+
+.graffitiHuge {
+    font-size: 100px;
+}
+
+.graffitiBox {
+    -ms-transform: rotate(-7deg); /* IE 9 */
+    -webkit-transform: rotate(-7deg); /* Chrome, Safari, Opera */
+    transform: rotate(-7deg);
+}
+
 .menuCol{
     float:left;
     width:180px;
@@ -141,7 +195,37 @@ body {
 }
 
 .chat {
-    border: 1px solid;
+    border: none;
+}
+
+.chatControl {
+    float: right;
+}
+
+#chatSubmit {
+    display: inline;
+    float: right;
+    margin-top: 5px;
+}
+
+.serverMsg {
+    color: #00F;
+}
+
+.serverErr {
+    color: #F00;
+}
+
+#outgoingChatMessage {
+    display:inline;
+    width:350px;
+    float: left;
+}
+
+.messageLabel {
+    display:inline;
+    float: left;
+    font-size: 16px;
 }
 
 .mainColHeight {
@@ -172,6 +256,7 @@ body {
     width: auto;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
+    font-size: 16px;
 }
 
 .banner {

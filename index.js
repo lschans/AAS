@@ -13,9 +13,12 @@ global.console.logDefault = global.console.log;
 global.console.log = require('eyes').inspector({maxLength: (1024 * 16)});
 
 var config = require('./config/config.js'),
+    execSync = require('exec-sync'),
     server = {},
     cluster = require('cluster'),
     processType;
+
+cluster.schedulingPolicy = cluster.SCHED_RR;
 
 // Populate server object
 server.config = config;
@@ -25,6 +28,11 @@ server.log = require('@dyflexis/logger')(server);
 server.user = require('@dyflexis/user')(server);
 server.session = require('@dyflexis/session')(server);
 server.cluster = {};
+
+server.config.git = {};
+server.config.git.commit = execSync('git show --summary | grep commit');
+server.config.git.date = execSync('git show --summary | grep Date');
+server.config.git.author = execSync('git show --summary | grep Author');
 
 // Require socket.io 2x both for ssl and plain and distribute them over redis
 server.httpSocket = require('socket.io');

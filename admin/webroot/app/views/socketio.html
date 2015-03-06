@@ -18,7 +18,7 @@
                 $("#scrollContainer").scrollTop($("#scrollContainer")[0].scrollHeight);
             });
             iosocket.on('disconnect', function() {
-                $('#incomingChatMessages').append('<liclass="serverErr">Disconnected from server</li>');
+                $('#incomingChatMessages').append('<li class="serverErr">Disconnected from server</li>');
                 $("#scrollContainer").scrollTop($("#scrollContainer")[0].scrollHeight);
             });
         });

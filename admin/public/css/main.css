@@ -14,33 +14,42 @@ fieldset {
     margin:1px;
     border-color:#F00;
     border-style: solid;
-    border-width: 3px;
 }
 
 .window {
     moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border-color:#0F0;
+    border-color:#000;
     border-style: solid;
     border-width: 1px;
     margin-top: 15px;
+    -webkit-box-shadow: 0 0 10px #0f0;
+    -moz-box-shadow:    0 0 10px #0f0;
+    box-shadow:         0 0 10px #0f0;
 }
 
 .windowLegend {
     float: right;
     moz-border-radius: 3px;
     -webkit-border-radius: 3px;
+    border-color:#000;
     border-width: 1px;
     border-style: solid;
     margin-top: -20px;
     background-color: #000;
+    -webkit-box-shadow: 0 0 10px #0f0;
+    -moz-box-shadow:    0 0 10px #0f0;
+    box-shadow:         0 0 10px #0f0;
 }
 
 .separator {
     height: 1px;
-    color: #00F;
-    background-color: #00F;
+    color: rgba(0, 0, 255, 0.3);
+    background-color: rgba(0, 0, 255, 0.3);
     border: none;
+    -webkit-box-shadow: 0 0 8px #00f;
+    -moz-box-shadow:    0 0 8px #00f;
+    box-shadow:         0 0 8px #00f;
 }
 
 .textcenter {
@@ -55,11 +64,14 @@ input {
 button {
     margin:2px 2px 2px 2px;
     background-color: #000;
-    color:#0F0;
+    color:#0f0;
     font-family: 'Gloria Hallelujah', cursive;
     moz-border-radius: 3px;
     -webkit-border-radius: 3px;
-    border: 1px solid #0f0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    -webkit-box-shadow: 0 0 10px #0f0;
+    -moz-box-shadow:    0 0 10px #0f0;
+    box-shadow:         0 0 10px #0f0;
 }
 
 button:hover {
@@ -83,7 +95,8 @@ input[type="text"], input[type="password"], textarea {
 
 html{
     background-color:#000;
-    color:#0F0;
+    color:rgba(0, 255, 0, 0.9);
+    text-shadow: 0 0 6px #0f0;
 }
 
 body {
@@ -101,22 +114,30 @@ body {
 .loginBanner {
     font-family: 'Bangers';
     font-size: 30px;
+    color:rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 10px #0f0;
 }
 
 .loginBannerBig {
     font-family: 'Bangers';
     font-size: 90px;
+    color:rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 10px #0f0;
 }
 
 .loginBox {
     height: 120px;
     width:  350px;
-    border-color: #00F;
+    border-color: #000;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
     background-color: rgba(0, 0, 0, 0.8);
+    border-width: 3px;
+    -webkit-box-shadow: 0 0 10px #00f;
+    -moz-box-shadow:    0 0 10px #00f;
+    box-shadow:         0 0 10px #00f;
 }
 
 .loginBoxCenter {
@@ -143,7 +164,6 @@ body {
 
 .loginBoxLabel {
     background-color: transparent;
-    color:#0F0;
     font-family: 'Gloria Hallelujah', cursive;
     font-size: 16px;
     float: left;
@@ -155,17 +175,20 @@ body {
 
 .graffitiGreen {
     font-family: graffiti;
-    color: #0f0;
+    color: #000;
+    text-shadow: 0 0 20px #0f0;
 }
 
 .graffitiBlue {
     font-family: graffiti;
-    color:#00f;
+    color: #000;
+    text-shadow: 0 0 20px #00f;
 }
 
 .graffitiRed {
     font-family: graffiti;
-    color:#f00;
+    color: #000;
+    text-shadow: 0 0 20px #f00;
 }
 
 .graffitiHuge {
@@ -182,9 +205,13 @@ body {
     float:left;
     width:180px;
     height: calc(100% - 110px);
-    border-color:#00F;
     margin:1px;
     margin-top: 0px;
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 20px #00f;
+    -moz-box-shadow:    0 0 20px #00f;
+    box-shadow:         0 0 20px #00f;
 }
 
 .scrollContainer {
@@ -210,10 +237,12 @@ body {
 
 .serverMsg {
     color: #00F;
+    text-shadow: 0 0 3px #00f;
 }
 
 .serverErr {
     color: #F00;
+    text-shadow: 0 0 3px #f00;
 }
 
 #outgoingChatMessage {
@@ -232,6 +261,14 @@ body {
     height: calc(100% - 110px);
 }
 
+.mainColGlow {
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 20px #f00;
+    -moz-box-shadow:    0 0 20px #f00;
+    box-shadow:         0 0 20px #f00;
+}
+
 @media screen and (max-width: 400px) {
     .mainCol {
         float: none;
@@ -241,10 +278,16 @@ body {
 }
 
 .footer {
+    font-size: 16px;
     height: 20px;
     width: auto;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 20px #f00;
+    -moz-box-shadow:    0 0 20px #f00;
+    box-shadow:         0 0 20px #f00;
 }
 
 .container {
@@ -257,18 +300,37 @@ body {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     font-size: 16px;
+    border-color: #000;
+    background-color: rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0 0 20px #f00;
+    -moz-box-shadow:    0 0 20px #f00;
+    box-shadow:         0 0 20px #f00;
 }
 
 .banner {
     margin-bottom: 5px;
     font-family: 'Bangers';
     font-size: 13px;
+    color:rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 10px #0f0;
+    display: inline;
 }
 
 .bannerBig {
     margin-bottom: 5px;
     font-family: 'Bangers';
     font-size: 39px;
+    color:rgba(0, 0, 0, 0.9);
+    text-shadow: 0 0 10px #0f0;
+    display: inline;
+}
+
+.ip {
+    position:absolute;
+    left:50%;
+    width: 150px;
+    margin-left: -75px;
+    vertical-align: middle;
 }
 
 .title{

@@ -1,4 +1,5 @@
 {
+  "version"     : "0.1.3-Nightly",
   "httpPort"    : 80,
   "httpsPort"   : 443,
   "liveReload"  : 35729,

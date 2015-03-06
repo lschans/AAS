@@ -51,18 +51,19 @@
     <body ng-app="aasAdmin">
         <fieldset class="header">
             <span class="bannerBig">AAS </span><span class="banner">(AWESOME ANGULAR SERVER)</span>
+            <span class="bannerBig ip">@@_SERVER_IP_@@</span>
            <a class="logout" onclick="logOut();"><i class="fa fa-sign-out fa-fw"></i>&nbsp; LOGOUT</a>
         </fieldset>
         <fieldset class="menuCol" ui-view="navigation">
         </fieldset>
-        <fieldset class="mainCol mainColHeight">
+        <fieldset class="mainCol mainColHeight mainColGlow">
             <div class="container">
                 <div ui-view="main"></div>
             </div>
         </fieldset>
         <div class="clear"></div>
         <fieldset class="footer">
-            <span>v@@_VERSION_@@ - git:@@_COMMIT_@@</span>
+            <span>VERSION: @@_VERSION_@@ - @@_DATE_@@; UPTIME: @@_UPTIME_@@sec</span>
         </fieldset>
     </body>
 </html>

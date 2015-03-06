@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "exec-sync": "^0.1.6",
     "eyes": "^0.1.8",
     "socket.io": "^1.3.5",
     "socket.io-redis": "^0.1.4"

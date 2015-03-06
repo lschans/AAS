@@ -25,7 +25,10 @@ server.log = require('@dyflexis/logger')(server);
 server.user = require('@dyflexis/user')(server);
 server.session = require('@dyflexis/session')(server);
 server.cluster = {};
-server.socketio = require('socket.io');
+
+// Require socket.io 2x both for ssl and plain
+server.httpSocket = require('socket.io');
+server.httpsSocket = require('socket.io');
 
 //server.helpers.testFiles();
 

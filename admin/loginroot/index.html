@@ -10,7 +10,6 @@
 <!doctype html>
 <html>
     <head>
-        <link href="css/main.css" rel="stylesheet">
         <script>
             function submitForm(){
                 var myForm = document.getElementById("myForm");
@@ -18,21 +17,28 @@
                 myForm.submit();
             }
         </script>
+
+        <!-- Google fonts  -->
+        <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Bangers' rel='stylesheet' type='text/css'>
+
+        <!-- The stylez -->
+        <link href="css/main.css" rel="stylesheet">
     </head>
     <body>
+    <span class="loginBannerBig">AAS </span><span class="loginBanner">(AWESOME ANGULAR SERVER)</span>
         <div>
-            <fieldset class="center loginbox">
+            <fieldset class="loginBoxCenter loginBox">
                 <span class="textcenter">@@_LOGIN_MESSAGE_@@</span>
                 <hr class="separator">
                 <form action="/" id="myForm">
-                    <label for="name">USERNAME:</label>
-                    <input id="name" type="text" name="name" value="admin">
-                    <br>
-                    <label for="password">PASSWORD:</label>
-                    <input id="password" type="password" name="password" value="test">
-                    <br>
+                    <label class="loginBoxLabel" for="name">USERNAME :</label>
+                    <input class="loginBoxInputText" id="name" type="text" name="name" value="admin">
+                    <div class="clear"></div>
+                    <label class="loginBoxLabel" for="password">PASSWORD  :</label>
+                    <input class="loginBoxInputText" id="password" type="password" name="password" value="test">
+                    <div class="clear"></div>
                     <input type="hidden" name="command" value="login">
-                    <button onclick='submitForm()'>LOGIN</button>
+                    <button class="loginButton" onclick='submitForm()'>LOGIN</button>
                 </form>
             </fieldset>
         </div>

@@ -1,19 +1,12 @@
+*:focus {
+    outline: 0;
+}
+
 fieldset {
     margin:1px;
     border-color:#F00;
-}
-
-.center {
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin:-50px 0 0 -125px
-}
-
-.loginbox {
-    height: 110px;
-    width:  255x;
-    border-color: #00F;
+    border-style: solid;
+    border-width: 3px;
 }
 
 .separator {
@@ -36,12 +29,29 @@ button {
     margin:2px 2px 2px 2px;
     background-color: #000;
     color:#0F0;
+    font-family: 'Gloria Hallelujah', cursive;
+    moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border: 1px solid #0f0;
+}
+
+button:hover {
+    background-color: #0f0;
+    color: #000;
 }
 
 input[type="text"], input[type="password"], textarea {
     background-color: transparent;
-    border-color: #444;
+    border: 0px solid;
+    border-bottom: 1px dashed;
     color:#0F0;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 16px;
+    width: auto;
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 html{
@@ -52,6 +62,66 @@ html{
 body {
     height: 98vh;
     width: calc(100% - 10px);
+    font-family: 'Gloria Hallelujah', cursive;
+}
+
+.loginButton{
+    float: right;
+    margin-top: 10px;
+}
+
+.loginBanner {
+    font-family: 'Bangers';
+    font-size: 30px;
+}
+
+.loginBannerBig {
+    font-family: 'Bangers';
+    font-size: 90px;
+}
+
+.loginBox {
+    height: 120px;
+    width:  350px;
+    border-color: #00F;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.loginBoxCenter {
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin: -60px 0 0 -175px
+}
+
+.loginBoxInputText {
+    background-color: transparent;
+    border: 0px solid;
+    border-bottom: 1px dashed;
+    color:#0F0;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 16px;
+    width: auto;
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+    margin-top: -4px;
+}
+
+.loginBoxLabel {
+    background-color: transparent;
+    color:#0F0;
+    font-family: 'Gloria Hallelujah', cursive;
+    font-size: 16px;
+    float: left;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+
 }
 
 .menuCol{
@@ -61,6 +131,17 @@ body {
     border-color:#00F;
     margin:1px;
     margin-top: 0px;
+}
+
+.scrollContainer {
+    overflow: scroll;
+    overflow-x:hidden;
+    overflow-y:visible;
+    height: 180px;
+}
+
+.chat {
+    border: 1px solid;
 }
 
 .mainColHeight {
@@ -76,13 +157,44 @@ body {
 }
 
 .footer {
-    height: 25px;
+    height: 20px;
     width: auto;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.container {
+    overflow: scroll;
 }
 
 .header {
-    height: 25px;
+    height: 30px;
     width: auto;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.banner {
+    margin-bottom: 5px;
+    font-family: 'Bangers';
+    font-size: 13px;
+}
+
+.bannerBig {
+    margin-bottom: 5px;
+    font-family: 'Bangers';
+    font-size: 39px;
+}
+
+.title{
+    display: inline;
+    float: left;
+}
+
+.logout{
+    display: inline;
+    float: right;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 .clear{
@@ -103,8 +215,10 @@ ol a {
 ol li a {
     display:block;
     width: 178px;
+    text-decoration: none
 }
 ol li a:hover {
-    background:#ddd;
-    color:#888
+    background:#2f2;
+    color:#000;
+    border-radius: 5px;
 }

@@ -25,6 +25,7 @@ server.log = require('@dyflexis/logger')(server);
 server.user = require('@dyflexis/user')(server);
 server.session = require('@dyflexis/session')(server);
 server.cluster = {};
+server.socketio = require('socket.io');
 
 //server.helpers.testFiles();
 

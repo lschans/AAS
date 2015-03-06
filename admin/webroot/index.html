@@ -16,14 +16,23 @@
         <link rel="icon" href="favicon.ico" type="image/x-icon"/>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
+        <!-- jQuery -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
         <!-- All the bower components, use as much bower as posible -->
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+
+        <!-- Socket.io -->
+        <script src="socket.io/socket.io.js"></script>
 
         <!-- The angular app and controllers -->
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
         <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+        <script type="text/javascript" src="app/general.js"></script>
         <script type="text/javascript" src="app/app.js"></script>
         <script type="text/javascript" src="app/controllers/nav-controller.js"></script>
+        <script type="text/javascript" src="app/controllers/socketio-controller.js"></script>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -33,12 +42,16 @@
         <![endif]-->
 
         <!-- The stylez -->
+        <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah|Bangers' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+        <!-- <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css"> -->
         <link href="css/main.css" rel="stylesheet">
 
     </head>
     <body ng-app="aasAdmin">
         <fieldset class="header">
-            <span>AAS (Awesome Angular Server) - v@@_VERSION_@@ - git:@@_COMMIT_@@</span>
+            <span class="bannerBig">AAS </span><span class="banner">(AWESOME ANGULAR SERVER)</span>
+           <a class="logout" onclick="logOut();"><i class="fa fa-sign-out fa-fw"></i>&nbsp; LOGOUT</a>
         </fieldset>
         <fieldset class="menuCol" ui-view="navigation">
         </fieldset>
@@ -49,7 +62,7 @@
         </fieldset>
         <div class="clear"></div>
         <fieldset class="footer">
-            <span>footer</span>
+            <span>v@@_VERSION_@@ - git:@@_COMMIT_@@</span>
         </fieldset>
     </body>
 </html>

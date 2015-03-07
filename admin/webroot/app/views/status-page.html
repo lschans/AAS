@@ -1,1 +1,11 @@
-<span>Lars is heerser</span>
+<fieldset class="window" ng-repeat="window in windows">
+    <legend class="windowLegend">{{ window.name }}</legend>
+    {{ window.content }}
+</fieldset>
+
+<div ng-app="myApp">
+    <div id="lastVal" ng-controller="ShowerCtrl">{{lastVal}}</div>
+    <div id="button-holder" ng-controller="CookieCtrl">
+        <button ng-click="console.log('test')">Bump!</button>
+    </div>
+</div>

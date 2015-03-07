@@ -16,7 +16,8 @@ aasAdmin.config(function($stateProvider, $urlRouterProvider) {
                     controller: 'navigationController'
                 },
                 'main' : {
-                    templateUrl: 'app/views/status-page.html'
+                    templateUrl: 'app/views/status-page.html',
+                    controller: 'statusController'
                 }
             }
         })

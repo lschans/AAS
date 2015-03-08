@@ -6,7 +6,7 @@
   "308": {"message": "Permanent redirect", "gotoUrl":"", "error":false},
   "401": {"message": "Unauthorized", "gotoUrl":"/", "error":true},
   "403": {"message": "Forbidden", "gotoUrl":"/", "error":true},
-  "404": {"message": "Path not found", "gotoUrl":"/", "error":true},
+  "404": {"message": "Path or file not found", "gotoUrl":"/", "error":true},
   "415": {"message": "File type not supported", "gotoUrl":"", "error":true},
   "500": {"message": "Internal error", "gotoUrl":"/", "error":true},
   "501": {"message": "Not implemented", "gotoUrl":"/", "error":true}

@@ -43,6 +43,18 @@ fieldset {
     box-shadow:         0 0 10px #0f0;
 }
 
+.errorWindowLegend {
+    color:#f00
+}
+
+.errorWindow {
+    width: 350px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    margin: -60px 0 0 -175px
+}
+
 .separator {
     height: 1px;
     color: rgba(0, 0, 255, 0.3);

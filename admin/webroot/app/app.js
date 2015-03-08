@@ -1,5 +1,5 @@
 // app.js
-var aasAdmin = angular.module('aasAdmin', ['ui.router']);
+var aasAdmin = angular.module('aasAdmin', ['ui.router','ngCookies']);
 
 aasAdmin.config(function($stateProvider, $urlRouterProvider) {
 

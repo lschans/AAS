@@ -16,9 +16,11 @@ var config = require('./config/config.js'),
     execSync = require('exec-sync'),
     server = {},
     cluster = require('cluster'),
+    net = require('net'),
     processType;
 
-cluster.schedulingPolicy = cluster.SCHED_RR;
+// Schedule round robin, this breaks the socket.io so don't use it anymore but keep the line here as reminder not to use it.
+//cluster.schedulingPolicy = cluster.SCHED_RR;
 
 // Populate server object
 server.config = config;
@@ -41,11 +43,9 @@ server.httpsSocket = require('socket.io');
 // Add redis transport to the server
 server.redis = require('socket.io-redis');
 
-//server.helpers.testFiles();
-
 // Cluster the webserver over all CPU cores to be multi threaded
 if (cluster.isMaster) {
-    processType = require('@dyflexis/master-proc')(server, cluster).execute();
+    processType = require('@dyflexis/master-proc')(server, cluster, net).execute();
 } else {
     processType = require('@dyflexis/worker-proc')(server, cluster).execute();
 }

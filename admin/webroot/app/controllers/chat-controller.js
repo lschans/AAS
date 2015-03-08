@@ -1,6 +1,6 @@
 aasAdmin.controller('chatController', ["$scope", "$cookies", "ioSocket", function($scope, $cookies, ioSocket) {
     $scope.messageLog = "";
-    
+
     $scope.sendMessage = function() {
         ioSocket.emit('message', $scope.message);
         $scope.message = '';

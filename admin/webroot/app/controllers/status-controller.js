@@ -12,6 +12,3 @@ aasAdmin.controller('statusController', ["$scope", "$cookies", "ioSocket", funct
     ];
 }]);
 
-aasAdmin.factory('ioSocket', function (socketFactory) {
-    return socketFactory();
-});

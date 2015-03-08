@@ -1,35 +1,14 @@
-<script>
-    $(function(){
-        // Crapped for test chat example using the sockets
-
-        var chatSubmit = function(){
-            iosocket.send($('#outgoingChatMessage').val());
-            $('#incomingChatMessages').append($('<li></li>').text($('#outgoingChatMessage').val()));
-            $('#outgoingChatMessage').val('');
-            $("#scrollContainer").scrollTop($("#scrollContainer")[0].scrollHeight);
-        }
-
-        $('#chatSubmit').click(function(){
-            chatSubmit();
-        });
-
-        $('#outgoingChatMessage').keypress(function(event) {
-            if(event.which == 13) {
-                event.preventDefault();
-                chatSubmit();
-            }
-        });
-    });
-</script>
-<fieldset class="window">
+<fieldset class="window" ng-controller='chatController'>
     <legend class="windowLegend">CHAT EXAMPLE</legend>
     <div class="chat">
         <span>Incoming Chat: </span>
         <div id="scrollContainer" class="scrollContainer">
-            <ul id="incomingChatMessages"></ul>
+            <ul>{{messageLog}}</ul>
+
         </div>
         <div class="chatControl">
-            <span class="messageLabel">Message: </span><input type="text" id="outgoingChatMessage"><button id="chatSubmit">SUBMIT</button>
+            <span class="messageLabel">Message: </span><input type="text" ng-model='message' id="outgoingChatMessage">
+            <button id="chatSubmit" ng-click="sendMessage(message)">SUBMIT</button>
         </div>
     </div>
 </fieldset>

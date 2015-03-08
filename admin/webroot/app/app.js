@@ -58,7 +58,6 @@ aasAdmin.config(function($stateProvider, $urlRouterProvider) {
                 },
                 'main' : {
                     templateUrl: 'app/views/socketio.html',
-                    controller: 'socketioController'
                 }
             }
         })

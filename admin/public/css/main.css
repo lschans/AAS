@@ -343,6 +343,13 @@ body {
     display: inline;
     float: right;
     font-family: 'Gloria Hallelujah', cursive;
+    cursor: pointer; cursor: hand;
+}
+
+.logout:hover {
+    background:#2f2;
+    color:#000;
+    border-radius: 5px;
 }
 
 .clear{

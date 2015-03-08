@@ -1,9 +1,11 @@
-var logOut = function(){
+var logOut = function() {
     var myForm = document.getElementById("myForm");
     myForm.method = "post";
     myForm.submit();
 }
 
+
+/*
 var iosocket = io.connect();
 
 iosocket.on('connect', function () {
@@ -18,3 +20,5 @@ iosocket.on('connect', function () {
         $("#scrollContainer").scrollTop($("#scrollContainer")[0].scrollHeight);
     });
 });
+
+*/

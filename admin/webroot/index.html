@@ -25,17 +25,22 @@
         <!-- Socket.io -->
         <script src="socket.io/socket.io.js"></script>
 
-        <!-- The angular app and controllers -->
+        <!-- The angular controllers before app -->
         <script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
         <script type="text/javascript" src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
         <script type="text/javascript" src="bower_components/angular-cookies/angular-cookies.min.js"></script>
+        <script type="text/javascript" src="bower_components/angular-socket-io/socket.min.js"></script>
 
         <script type="text/javascript" src="app/general.js"></script>
         <script type="text/javascript" src="app/app.js"></script>
-        <!-- <script type="text/javascript" src="bower_components/angular-socket-io/socket.min.js"></script> -->
+
+        <!-- The angular controllers after app -->
         <script type="text/javascript" src="app/controllers/nav-controller.js"></script>
         <!-- <script type="text/javascript" src="app/controllers/socketio-controller.js"></script> -->
         <script type="text/javascript" src="app/controllers/status-controller.js"></script>
+        <script type="text/javascript" src="app/controllers/header-controller.js"></script>
+
+
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -52,10 +57,10 @@
 
     </head>
     <body ng-app="aasAdmin">
-        <fieldset class="header">
+        <fieldset class="header" ng-controller="headerController">
             <span class="bannerBig">AAS </span><span class="banner">(AWESOME ANGULAR SERVER)</span>
             <span class="bannerBig ip">@@_SERVER_IP_@@</span>
-           <a class="logout" onclick="logOut();"><i class="fa fa-sign-out fa-fw"></i>&nbsp; LOGOUT</a>
+           <a class="logout" ng-click="logout()"><i class="fa fa-sign-out fa-fw"></i>&nbsp; LOGOUT</a>
         </fieldset>
         <fieldset class="menuCol" ui-view="navigation">
         </fieldset>

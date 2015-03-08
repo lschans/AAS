@@ -1,5 +1,6 @@
 // app.js
-var aasAdmin = angular.module('aasAdmin', ['ui.router','ngCookies']);
+var aasAdmin = angular.module('aasAdmin', ['ui.router','ngCookies', 'btford.socket-io']);
+
 
 aasAdmin.config(function($stateProvider, $urlRouterProvider) {
 

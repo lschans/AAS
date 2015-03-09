@@ -1,4 +1,6 @@
-<fieldset class="window" ng-repeat="window in windows">
-    <legend class="windowLegend">{{ window.name }}</legend>
-    {{ window.content }}
-</fieldset>
+<div class="windowContainer">
+    <fieldset class="window" ng-repeat="window in windows">
+        <legend class="windowLegend">{{ window.name }}</legend>
+        <pre>{{ window.content }}</pre>
+    </fieldset>
+</div>

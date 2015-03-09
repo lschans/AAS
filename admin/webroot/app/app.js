@@ -1,6 +1,5 @@
 // app.js
-var aasAdmin = angular.module('aasAdmin', ['ui.router','ngCookies', 'btford.socket-io']);
-
+var aasAdmin = angular.module('aasAdmin', ['ui.router','ngCookies', 'btford.socket-io', 'luegg.directives']);
 
 aasAdmin.config(function($stateProvider, $urlRouterProvider) {
 
@@ -61,5 +60,4 @@ aasAdmin.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
-
 });

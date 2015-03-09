@@ -2,13 +2,12 @@
     <legend class="windowLegend">CHAT EXAMPLE</legend>
     <div class="chat">
         <span>Incoming Chat: </span>
-        <div id="scrollContainer" class="scrollContainer">
-            <ul>{{messageLog}}</ul>
-
+        <div scroll-glue id="scrollContainer" class="scrollContainer">
+            <ul ng-bind-html="messageLog"></ul>
         </div>
         <div class="chatControl">
-            <span class="messageLabel">Message: </span><input type="text" ng-model='message' id="outgoingChatMessage">
-            <button id="chatSubmit" ng-click="sendMessage(message)">SUBMIT</button>
+            <form ng-submit="sendMessage(message)"><span class="messageLabel">Message: </span><input type="text"  ng-model='message' id="outgoingChatMessage">
+            <button id="chatSubmit">SUBMIT</button></form>
         </div>
     </div>
 </fieldset>

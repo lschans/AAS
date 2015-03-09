@@ -2,18 +2,26 @@ aasAdmin.controller('statusController', ["$scope", "$cookies", "ioSocket", funct
     var sessionID = $cookies['X-Session-ID'];
     var sessionString = 'SESSION ID: ' + sessionID;
 
-    if(typeof($scope.windows) == 'undefined') {
-        $scope.windows = [
-            {name: 'Session', content: sessionString}
-        ];
+    // Size the window on view load
+    contsize();
+
+    $scope.getConfig = function() {
         ioSocket.emit('admin', {sessionID:sessionID, command:'config', subcommand:'global'});
         ioSocket.emit('admin', {sessionID:sessionID, command:'config', subcommand:'users'});
         ioSocket.emit('admin', {sessionID:sessionID, command:'config', subcommand:'session'});
         ioSocket.emit('admin', {sessionID:sessionID, command:'config', subcommand:'ssl'});
+    }
+
+    if(typeof($scope.windows) == 'undefined') {
+        $scope.windows = [
+            {name: 'Session', content: sessionString}
+        ];
+        $scope.getConfig();
     };
 
     ioSocket.on('connect', function () {
         console.log('connected');
+        $scope.getConfig();
     });
 
     $scope.$on('socket:admin', function(event, message) {

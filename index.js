@@ -14,13 +14,18 @@ global.console.log = require('eyes').inspector({maxLength: (1024 * 16)});
 
 var config = require('./config/config.js'),
     execSync = require('exec-sync'),
+    posix = require('posix'),
     server = {},
     cluster = require('cluster'),
     net = require('net'),
     processType;
 
+// raise maximum number of open file descriptors to 10k,
+// hard limit is left unchanged
+posix.setrlimit('nofile', { soft: 10000 });
+
 // Schedule round robin, this breaks the socket.io so don't use it anymore but keep the line here as reminder not to use it.
-//cluster.schedulingPolicy = cluster.SCHED_RR;
+cluster.schedulingPolicy = cluster.SCHED_RR;
 
 // Populate server object
 server.config = config;

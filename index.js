@@ -22,7 +22,7 @@ var config = require('./config/config.js'),
 
 // raise maximum number of open file descriptors to 10k,
 // hard limit is left unchanged
-if(typeof(posix.setrlimit)  == 'function') posix.setrlimit('nofile', { soft: 10000 });
+if(typeof(posix.setrlimit)  == 'function') posix.setrlimit('nofile', { soft: 10000, hard: 10000 });
 
 // Schedule round robin, this breaks the socket.io so don't use it anymore but keep the line here as reminder not to use it.
 cluster.schedulingPolicy = cluster.SCHED_RR;

@@ -1,3 +1,4 @@
+# Install ssl libs
 yum -y install mod_ssl openssl
 
 # Generate private key 

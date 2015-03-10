@@ -23,6 +23,7 @@ build/Release
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules/
+!node_modules/\@dyflexis/authenticate/
 !node_modules/\@dyflexis/client-info/
 !node_modules/\@dyflexis/cookies/
 !node_modules/\@dyflexis/headers/
@@ -43,6 +44,7 @@ node_modules/
 !node_modules/\@dyflexis/user/
 !node_modules/\@dyflexis/worker-proc
 
+node_modules/\@dyflexis/authenticate/node_modules/
 node_modules/\@dyflexis/client-info/node_modules/
 node_modules/\@dyflexis/parse-request/node_modules/
 node_modules/\@dyflexis/spdy-server/node_modules/

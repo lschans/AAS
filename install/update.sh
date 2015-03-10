@@ -17,8 +17,8 @@ cd $appdir/node_modules/\@dyflexis/session/node_modules/
 npm install
 
 cd $appdir/admin/public
-bower install
+bower install --allow-root
 
 cd $appdir/admin/webroot
-bower install
+bower install --allow-root
 

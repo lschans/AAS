@@ -15,7 +15,7 @@
                 var myForm = document.getElementById("myForm");
                 myForm.method = "post";
                 myForm.submit();
-                setTimeout(function () {
+                setTimeout(function () { // Set reload timeout because not all browsers auto reload after a submit
                     window.location.href = "/"; //will redirect to your blog page (an ex: blog.html)
                 }, 500); // will call the function after 0.5 secs.
             }

@@ -5,15 +5,15 @@ appdir=$(dirname $(pwd))
 cd $appdir
 npm install
 
-cd $appdir/node_modules/\@dyflexis/client-info/node_modules/
+cd $appdir/node_modules/@dyflexis/client-info
 npm install
-cd $appdir/node_modules/\@dyflexis/parse-request/node_modules/
+cd $appdir/node_modules/@dyflexis/parse-request
 npm install
-cd $appdir/node_modules/\@dyflexis/spdy-server/node_modules/
+cd $appdir/node_modules/@dyflexis/spdy-server
 npm install
-cd $appdir/node_modules/\@dyflexis/serve/node_modules/
+cd $appdir/node_modules/@dyflexis/serve
 npm install
-cd $appdir/node_modules/\@dyflexis/session/node_modules/
+cd $appdir/node_modules/@dyflexis/session
 npm install
 
 cd $appdir/admin/public

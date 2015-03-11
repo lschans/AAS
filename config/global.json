@@ -12,7 +12,7 @@
                     "localhost",
                     "testdomain.nl"
                   ],
-  "verbose"     : true,
+  "verbose"     : false,
   "forceHTTPS"  : false,
   "development" : "./development/",
   "production"  : "./production/",

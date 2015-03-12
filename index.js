@@ -13,12 +13,16 @@ global.console.logDefault = global.console.log;
 global.console.log = require('eyes').inspector({maxLength: (1024 * 16)});
 
 var config = require('./config/config.js'),
+    events = require('events'),
     execSync = require('exec-sync'),
     posix = require('posix'),
     server = {},
     cluster = require('cluster'),
     net = require('net'),
     processType;
+
+// Limit max listeners to 500 per thread, must be from config but for now its nice
+events.EventEmitter.prototype._maxListeners = 500;
 
 // raise maximum number of open file descriptors to 10k,
 // hard limit is left unchanged
@@ -60,3 +64,4 @@ process.on('uncaughtException', function (err) {
     console.error(err.stack);
     console.log("Can't kill me xD... but SNAFU all over the place, my PID:" + process.pid);
 });
+

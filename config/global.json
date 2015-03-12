@@ -1,5 +1,7 @@
 {
   "version"     : "0.1.3-Nightly",
+  "httpStartPort"    : 9000,
+  "httpsStartPort"   : 10000,
   "httpPort"    : 80,
   "httpsPort"   : 443,
   "liveReload"  : 35729,

@@ -12,6 +12,8 @@
     <head>
         <title>Admin Angular Server</title>
 
+        <meta http-equiv="X-UA-COMPATIBLE" content="IE=EmulateIE9">
+
         <!-- Favicon stuff -->
         <link rel="icon" href="favicon.ico" type="image/x-icon"/>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
@@ -25,15 +27,6 @@
         <!-- Socket.io -->
         <script src="socket.io/socket.io.js"></script>
 
-        <script>
-            io.set('transports', [
-                'websocket'
-                , 'flashsocket'
-                , 'htmlfile'
-                , 'xhr-polling'
-                , 'jsonp-polling'
-            ]);
-        </script>
 
         <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

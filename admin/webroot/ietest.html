@@ -6,6 +6,16 @@
     <script src="/socket.io/socket.io.js"></script>
     <script>
         var socket = io();
+
+        io.set('transports', [
+            'websocket'
+            , 'flashsocket'
+            , 'htmlfile'
+            , 'xhr-polling'
+            , 'jsonp-polling'
+        ]);
+
+        
         socket.on('message', function(msg){
             $('#messages').append($('<li>').text(msg));
         });

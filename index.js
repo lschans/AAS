@@ -55,3 +55,8 @@ if (cluster.isMaster) {
     processType = require('@dyflexis/worker-proc')(server, cluster).execute();
 }
 
+// Catch process errors
+process.on('uncaughtException', function (err) {
+    console.error(err.stack);
+    console.log("OMG SNAFU all over the place, my PID:" + process.pid);
+});

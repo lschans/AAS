@@ -44,6 +44,7 @@ node_modules/
 !node_modules/\@dyflexis/user/
 !node_modules/\@dyflexis/worker-proc
 
+node_modules/\@dyflexis/master-proc/node_modules/
 node_modules/\@dyflexis/authenticate/node_modules/
 node_modules/\@dyflexis/client-info/node_modules/
 node_modules/\@dyflexis/parse-request/node_modules/

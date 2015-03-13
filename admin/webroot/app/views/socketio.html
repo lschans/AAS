@@ -1,0 +1,29 @@
+<fieldset class="window" ng-controller='socketController'>
+    <legend class="windowLegend">CONNECTIONS</legend>
+    <table class="socketTable">
+        <tr>
+            <th class="socketTableCol">WORKER</th>
+            <th class="socketTableCol">TIME</th>
+            <th class="socketTableCol">DEVICE</th>
+            <th class="socketTableCol">USER</th>
+            <th class="socketTableCol">IP</th>
+            <th class="socketTableSessionCol">SESSIONID</th>
+            <th class="socketTableButtonCol">ACTIONS</th>
+        </tr>
+        <tr ng-repeat="connection in connections">
+            <td>{{connection.worker}}</td>
+            <td>{{connection.time}}</td>
+            <td>{{connection.device}}</td>
+            <td>{{connection.user}}</td>
+            <td>{{connection.ip}}</td>
+            <td>{{connection.sessionID}}</td>
+            <td>
+                <span style="display: inline-block">
+                    <button>DROP</button>
+                    <button>MESSAGE</button>
+                    <button>INFO</button>
+                </span>
+            </td>
+        </tr>
+    </table>
+</fieldset>

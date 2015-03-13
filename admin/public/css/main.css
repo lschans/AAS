@@ -78,6 +78,44 @@ fieldset {
     box-shadow:         0 0 8px #00f;
 }
 
+table, th, td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    -webkit-box-shadow: 0 0 10px #0f0;
+    -moz-box-shadow:    0 0 10px #0f0;
+    box-shadow:         0 0 10px #0f0;
+}
+
+th {
+    background-color: rgba(0, 255, 0, 25);
+    border: 1px solid #000;
+    color: #000;
+}
+
+td {
+    padding: 5px;
+}
+
+.socketTable {
+    width: 100%;
+    margin-top: 20px;
+    moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.socketTableButtonCol {
+    width: auto;
+    white-space:nowrap;
+}
+
+.socketTableSessionCol {
+    max-width:100%;
+}
+
+.socketTableCol {
+    max-width:100%;
+}
+
 .textcenter {
     width: 100%;
     text-align:center

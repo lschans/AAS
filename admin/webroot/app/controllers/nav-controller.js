@@ -20,6 +20,11 @@ aasAdmin.controller('navigationController', function($scope) {
             name: 'SOCKET.IO',
             sref: 'socketio',
             fa : 'fa fa-plug fa-fw'
+        },
+        {
+            name: 'CHAT',
+            sref: 'chat',
+            fa : 'fa fa-comment-o fa-fw'
         }
     ];
 });

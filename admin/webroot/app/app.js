@@ -60,4 +60,17 @@ aasAdmin.config(function($stateProvider, $urlRouterProvider) {
                 }
             }
         })
+
+        .state('chat', {
+            url : '/chat',
+            views : {
+                'navigation' : {
+                    templateUrl: 'app/views/navigation.html',
+                    controller: 'navigationController'
+                },
+                'main' : {
+                    templateUrl: 'app/views/chat.html',
+                }
+            }
+        })
 });

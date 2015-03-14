@@ -20,6 +20,8 @@ fieldset {
     border-style: solid;
 }
 
+
+
 .windowContainer {
     /*height: calc(100% - 110px);*/
     height: 650px;
@@ -39,6 +41,10 @@ fieldset {
     -webkit-box-shadow: 0 0 2px #0f0;
     -moz-box-shadow:    0 0 2px #0f0;
     box-shadow:         0 0 2px #0f0;
+}
+
+.fullWindow {
+    height: calc(100% - 110px);
 }
 
 .windowLegend {

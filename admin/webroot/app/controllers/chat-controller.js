@@ -1,6 +1,9 @@
 aasAdmin.controller('chatController', ["$scope", "$cookies", "ioSocket", "$sce", function($scope, $cookies, ioSocket, $sce) {
     var messageLog = "";
 
+    // Scale the window
+    contsize();
+
     $scope.sendMessage = function() {
         messageLog += "<li>ME - " + $scope.message + "</li>";
         $scope.messageLog = $sce.trustAsHtml(messageLog);

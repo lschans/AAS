@@ -38,6 +38,7 @@ node_modules/
 !node_modules/\@dyflexis/session/
 !node_modules/\@dyflexis/serve/
 !node_modules/\@dyflexis/socket-server/
+!node_modules/\@dyflexis/socket-manager/
 !node_modules/\@dyflexis/spdy-server
 !node_modules/\@dyflexis/ssl-socket-server/
 !node_modules/\@dyflexis/template/
@@ -49,6 +50,7 @@ node_modules/\@dyflexis/authenticate/node_modules/
 node_modules/\@dyflexis/client-info/node_modules/
 node_modules/\@dyflexis/parse-request/node_modules/
 node_modules/\@dyflexis/spdy-server/node_modules/
+node_modules/\@dyflexis/socket-manager/node_modules/
 node_modules/\@dyflexis/serve/node_modules/
 node_modules/\@dyflexis/session/node_modules/
 certs/

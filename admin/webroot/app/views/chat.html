@@ -3,7 +3,7 @@
     <div class="chat">
         <span>Incoming Chat: </span>
         <div scroll-glue id="scrollContainer" class="scrollContainer">
-            <ul ng-bind-html="messageLog"></ul>
+            <ul ng-bind-html="messageLog" class="noBullet"></ul>
         </div>
         <div class="chatControl">
             <form ng-submit="sendMessage(message)"><span class="messageLabel">Message: </span><input type="text"  ng-model='message' id="outgoingChatMessage">

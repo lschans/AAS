@@ -232,6 +232,11 @@ body {
     margin-top: -4px;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #000 inset;
+    -webkit-text-fill-color: #0F0 !important;
+}
+
 .loginBoxLabel {
     background-color: transparent;
     font-family: 'Gloria Hallelujah', cursive;
@@ -271,6 +276,12 @@ body {
     transform: rotate(-7deg);
 }
 
+.noBullet {
+    list-style-type: none;
+    margin-left: -30px;
+    float: left;
+}
+
 .menuCol{
     float:left;
     width:180px;
@@ -288,7 +299,7 @@ body {
     overflow: scroll;
     overflow-x:hidden;
     overflow-y:visible;
-    height: 180px;
+    height: 100%;
 }
 
 .chat {

@@ -1,4 +1,7 @@
 aasAdmin.controller('socketController', ["$scope", "$cookies", "ioSocket", "$sce", function($scope, $cookies, ioSocket, $sce) {
+    // Scale the window
+    contsize();
+
     $scope.connections = [
         {worker:1, time:'1212', user:'admin', sessionID:'aabbccddeeff', ip:'192.168.2.1', device:'desk'},
         {worker:1, time:'1252', user:'guest', sessionID:'gsdfgdfsgdfsg', ip:'192.168.18.6', device:'mobile'},

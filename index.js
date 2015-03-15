@@ -36,14 +36,7 @@ server.config = config;
 server.helpers = require('@dyflexis/server-helpers')(server);
 server.config.network = server.helpers.serverNICs();
 server.log = require('@dyflexis/logger')(server);
-server.user = require('@dyflexis/user')(server);
-server.session = require('@dyflexis/session')(server);
 server.cluster = {};
-
-server.config.git = {};
-server.config.git.commit = execSync('git show --summary | grep commit');
-server.config.git.date = execSync('git show --summary | grep Date');
-server.config.git.author = execSync('git show --summary | grep Author');
 
 // Require socket.io 2x both for ssl and plain and distribute them over redis
 server.httpSocket = require('socket.io');
@@ -56,6 +49,15 @@ server.redis = require('socket.io-redis');
 if (cluster.isMaster) {
     processType = require('@dyflexis/master-proc')(server, cluster, net).execute();
 } else {
+    server.user = require('@dyflexis/user')(server);
+    server.session = require('@dyflexis/session')(server);
+    server.socketServer = require('@dyflexis/socket-server')(server);
+    server.socketManager = require('@dyflexis/socket-manager')(server);
+
+    server.config.git = {};
+    server.config.git.commit = execSync('git show --summary | grep commit');
+    server.config.git.date = execSync('git show --summary | grep Date');
+    server.config.git.author = execSync('git show --summary | grep Author');
     processType = require('@dyflexis/worker-proc')(server, cluster).execute();
 }
 

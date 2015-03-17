@@ -32,6 +32,7 @@ if(typeof(posix.setrlimit)  == 'function') posix.setrlimit('nofile', { soft: 100
 cluster.schedulingPolicy = cluster.SCHED_RR;
 
 // Populate server object
+config.appRoot = __dirname;
 server.config = config;
 server.helpers = require('@dyflexis/server-helpers')(server);
 server.config.network = server.helpers.serverNICs();

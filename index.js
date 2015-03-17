@@ -63,7 +63,7 @@ if (cluster.isMaster) {
 
 // Catch process errors
 process.on('uncaughtException', function (err) {
-    console.error(err.stack);
+    console.error(JSON.stringify(err));
     console.log("Can't kill me xD... but SNAFU all over the place, my PID:" + process.pid);
 });
 

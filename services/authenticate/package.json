@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "seneca": "^0.6.1",
+    "seneca-redis-transport": "^0.3.0"
+  }
+}

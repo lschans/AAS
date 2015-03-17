@@ -1,5 +1,4 @@
-
-module.exports = function () { 
+module.exports = function () {
    var seneca = this;
 
    seneca.add({domain:'auth',cmd:'authenticate'},function(args,done){

@@ -1,0 +1,5 @@
+{
+   "name" : "Deus applicatie",
+   "methods" : ["GET","POST","DELETE","OPTIONS","PUT"], 
+   "handler" : "mybackend"
+}

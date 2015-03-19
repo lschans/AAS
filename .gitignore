@@ -22,37 +22,15 @@ build/Release
 # Dependency directory
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-node_modules/
-!node_modules/\@dyflexis/authenticate/
-!node_modules/\@dyflexis/client-info/
-!node_modules/\@dyflexis/cookies/
-!node_modules/\@dyflexis/headers/
-!node_modules/\@dyflexis/http-server/
-!node_modules/\@dyflexis/https-server/
-!node_modules/\@dyflexis/live-reload/
-!node_modules/\@dyflexis/logger/
-!node_modules/\@dyflexis/master-proc
-!node_modules/\@dyflexis/parse-request/
-!node_modules/\@dyflexis/server-helpers/
-!node_modules/\@dyflexis/server-info/
-!node_modules/\@dyflexis/session/
-!node_modules/\@dyflexis/serve/
-!node_modules/\@dyflexis/socket-server/
-!node_modules/\@dyflexis/socket-manager/
-!node_modules/\@dyflexis/spdy-server
-!node_modules/\@dyflexis/ssl-socket-server/
-!node_modules/\@dyflexis/template/
-!node_modules/\@dyflexis/user/
-!node_modules/\@dyflexis/worker-proc
 
-node_modules/\@dyflexis/master-proc/node_modules/
-node_modules/\@dyflexis/authenticate/node_modules/
-node_modules/\@dyflexis/client-info/node_modules/
-node_modules/\@dyflexis/parse-request/node_modules/
-node_modules/\@dyflexis/spdy-server/node_modules/
-node_modules/\@dyflexis/socket-manager/node_modules/
-node_modules/\@dyflexis/serve/node_modules/
-node_modules/\@dyflexis/session/node_modules/
+# Exclude node modules
+node_modules/*
+*/node_modules/*
+**/node_modules/*
+
+# Include all @dyflexis modules
+!node_modules\/@dyflexis
+
 certs/
 
 # Users Environment Variables

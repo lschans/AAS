@@ -37,6 +37,9 @@ function loadConfig() {
         config[file[0]] = require('./' + value);
         if (config.global.verbose === true) console.log('    *   ' + file[0] + ' loaded.');
     });
+
+    // Load app specific config
+    config.global.app = require(config.global.app);
 }
 
 // Initial load config

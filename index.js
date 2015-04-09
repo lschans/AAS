@@ -63,8 +63,22 @@ if (cluster.isMaster) {
 }
 
 // Catch process errors
+
+
 process.on('uncaughtException', function (err) {
-    console.error(JSON.stringify(err));
-    console.log("Can't kill me xD... but SNAFU all over the place, my PID:" + process.pid);
+    switch(err.code) {
+        case "ECONNRESET":
+            console.log('Error ECONNRESET, a client disconnected dirty');
+            break;
+
+        case "ECONNREFUSED":
+            console.log('Error ECONNREFUSED, could not open a port for listening');
+            break;
+
+        default:
+            console.error(JSON.stringify(err));
+            console.log("Unknown error, my PID:" + process.pid);
+    }
 });
+
 

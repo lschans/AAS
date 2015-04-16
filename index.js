@@ -56,9 +56,9 @@ if (cluster.isMaster) {
     server.socketManager = require('@AAS/socket-manager')(server);
 
     server.config.git = {};
-    server.config.git.commit = execSync('git show --summary | grep commit');
-    server.config.git.date = execSync('git show --summary | grep Date');
-    server.config.git.author = execSync('git show --summary | grep Author');
+    server.config.git.commit = '';//execSync('git show --summary | grep commit');
+    server.config.git.date =  '';//execSync('git show --summary | grep Date');
+    server.config.git.author =  '';//execSync('git show --summary | grep Author');
     processType = require('@AAS/worker-proc')(server, cluster).execute();
 }
 

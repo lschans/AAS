@@ -23,12 +23,14 @@ build/Release
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules/
-!node_modules/\@AAS/authenticate/
-!node_modules/\@AAS/client-info/
-!node_modules/\@AAS/cookies/
-!node_modules/\@AAS/headers/
-!node_modules/\@AAS/http-server/
-!node_modules/\@AAS/https-server/
+
+!node_modules/\@AAS
+!node_modules/@AAS/authenticate/
+!node_modules/@AAS/client-info/
+!node_modules/@AAS/cookies/
+!node_modules/@AAS/headers/
+!node_modules/@AAS/http-server/
+!node_modules/@AAS/https-server/
 !node_modules/\@AAS/live-reload/
 !node_modules/\@AAS/logger/
 !node_modules/\@AAS/master-proc

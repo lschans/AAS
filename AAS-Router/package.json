@@ -1,7 +1,7 @@
 {
-  "name": "worker-proc",
+  "name": "AAS-Router",
   "version": "1.0.0",
-  "description": "",
+  "description": "The router that runs in front of AAS",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

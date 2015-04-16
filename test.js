@@ -21,10 +21,10 @@ var config = require('./config/config.js'),
 
 // Populate server object
 server.config = config;
-server.helpers = require('@dyflexis/server_helpers')(server);
-server.log = require('@dyflexis/logger')(server);
-server.user = require('@dyflexis/user')(server);
-server.session = require('@dyflexis/session')(server);
+server.helpers = require('@AAS/server_helpers')(server);
+server.log = require('@AAS/logger')(server);
+server.user = require('@AAS/user')(server);
+server.session = require('@AAS/session')(server);
 server.cluster = {};
 
 var request = {},

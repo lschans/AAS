@@ -34,9 +34,9 @@ cluster.schedulingPolicy = cluster.SCHED_RR;
 // Populate server object
 config.appRoot = __dirname;
 server.config = config;
-server.helpers = require('@dyflexis/server-helpers')(server);
+server.helpers = require('@AAS/server-helpers')(server);
 server.config.network = server.helpers.serverNICs();
-server.log = require('@dyflexis/logger')(server);
+server.log = require('@AAS/logger')(server);
 server.cluster = {};
 
 // Require socket.io 2x both for ssl and plain and distribute them over redis
@@ -48,23 +48,22 @@ server.redis = require('socket.io-redis');
 
 // Cluster the webserver over all CPU cores to be multi threaded
 if (cluster.isMaster) {
-    processType = require('@dyflexis/master-proc')(server, cluster, net).execute();
+    processType = require('@AAS/master-proc')(server, cluster, net).execute();
 } else {
-    server.user = require('@dyflexis/user')(server);
-    server.session = require('@dyflexis/session')(server);
-    server.socketServer = require('@dyflexis/socket-server')(server);
-    server.socketManager = require('@dyflexis/socket-manager')(server);
+    server.user = require('@AAS/user')(server);
+    server.session = require('@AAS/session')(server);
+    server.socketServer = require('@AAS/socket-server')(server);
+    server.socketManager = require('@AAS/socket-manager')(server);
 
     server.config.git = {};
     server.config.git.commit = execSync('git show --summary | grep commit');
     server.config.git.date = execSync('git show --summary | grep Date');
     server.config.git.author = execSync('git show --summary | grep Author');
-    processType = require('@dyflexis/worker-proc')(server, cluster).execute();
+    processType = require('@AAS/worker-proc')(server, cluster).execute();
 }
 
 // Catch process errors
 
-/*
 process.on('uncaughtException', function (err) {
     switch(err.code) {
         case "ECONNRESET":
@@ -80,5 +79,4 @@ process.on('uncaughtException', function (err) {
             console.log("Unknown error, my PID:" + process.pid);
     }
 });
-*/
 

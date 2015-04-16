@@ -23,36 +23,36 @@ build/Release
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 node_modules/
-!node_modules/\@dyflexis/authenticate/
-!node_modules/\@dyflexis/client-info/
-!node_modules/\@dyflexis/cookies/
-!node_modules/\@dyflexis/headers/
-!node_modules/\@dyflexis/http-server/
-!node_modules/\@dyflexis/https-server/
-!node_modules/\@dyflexis/live-reload/
-!node_modules/\@dyflexis/logger/
-!node_modules/\@dyflexis/master-proc
-!node_modules/\@dyflexis/parse-request/
-!node_modules/\@dyflexis/server-helpers/
-!node_modules/\@dyflexis/server-info/
-!node_modules/\@dyflexis/session/
-!node_modules/\@dyflexis/serve/
-!node_modules/\@dyflexis/socket-server/
-!node_modules/\@dyflexis/socket-manager/
-!node_modules/\@dyflexis/spdy-server
-!node_modules/\@dyflexis/ssl-socket-server/
-!node_modules/\@dyflexis/template/
-!node_modules/\@dyflexis/user/
-!node_modules/\@dyflexis/worker-proc
+!node_modules/\@AAS/authenticate/
+!node_modules/\@AAS/client-info/
+!node_modules/\@AAS/cookies/
+!node_modules/\@AAS/headers/
+!node_modules/\@AAS/http-server/
+!node_modules/\@AAS/https-server/
+!node_modules/\@AAS/live-reload/
+!node_modules/\@AAS/logger/
+!node_modules/\@AAS/master-proc
+!node_modules/\@AAS/parse-request/
+!node_modules/\@AAS/server-helpers/
+!node_modules/\@AAS/server-info/
+!node_modules/\@AAS/session/
+!node_modules/\@AAS/serve/
+!node_modules/\@AAS/socket-server/
+!node_modules/\@AAS/socket-manager/
+!node_modules/\@AAS/spdy-server
+!node_modules/\@AAS/ssl-socket-server/
+!node_modules/\@AAS/template/
+!node_modules/\@AAS/user/
+!node_modules/\@AAS/worker-proc
 
-node_modules/\@dyflexis/master-proc/node_modules/
-node_modules/\@dyflexis/authenticate/node_modules/
-node_modules/\@dyflexis/client-info/node_modules/
-node_modules/\@dyflexis/parse-request/node_modules/
-node_modules/\@dyflexis/spdy-server/node_modules/
-node_modules/\@dyflexis/socket-manager/node_modules/
-node_modules/\@dyflexis/serve/node_modules/
-node_modules/\@dyflexis/session/node_modules/
+node_modules/\@AAS/master-proc/node_modules/
+node_modules/\@AAS/authenticate/node_modules/
+node_modules/\@AAS/client-info/node_modules/
+node_modules/\@AAS/parse-request/node_modules/
+node_modules/\@AAS/spdy-server/node_modules/
+node_modules/\@AAS/socket-manager/node_modules/
+node_modules/\@AAS/serve/node_modules/
+node_modules/\@AAS/session/node_modules/
 certs/
 
 # Users Environment Variables

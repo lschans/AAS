@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "exec-sync": "^0.1.6",
     "eyes": "^0.1.8",
     "posix": "^2.0.0",
     "seneca": "^0.6.1",

@@ -64,7 +64,7 @@ if (cluster.isMaster) {
 
 // Catch process errors
 
-
+/*
 process.on('uncaughtException', function (err) {
     switch(err.code) {
         case "ECONNRESET":
@@ -80,5 +80,5 @@ process.on('uncaughtException', function (err) {
             console.log("Unknown error, my PID:" + process.pid);
     }
 });
-
+*/
 

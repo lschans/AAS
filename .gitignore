@@ -22,7 +22,14 @@ build/Release
 # Dependency directory
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-node_modules/
+#node_modules/
+
+node_modules/eyes
+node_modules/posix
+node_modules/seneca
+node_modules/seneca-redis-transport
+node_modules/socket.io
+node_modules/socket.io-redis
 
 !node_modules/\@AAS
 !node_modules/@AAS/authenticate/

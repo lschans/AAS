@@ -1,0 +1,147 @@
+{
+  "id": "maxpane",
+  "scripts" : {
+    "build" : "npm script line here",
+    "test"  : "test script here"
+  },
+  "middleWare":[
+    {"name" : "testMod", "path":"/Users/lschans/Projects/maxpane-engine/aas_modules/testMod"},
+    {"name" : "smartyReplace", "path":"/Users/lschans/Projects/maxpane-engine/aas_modules/smartyReplace"}
+  ],
+  "defaultDomain":"game.maxpane.nl",
+  "AAS" :[
+    {
+      "domain":"www.maxpane.nl",
+      "forceHTTPS"  : false,
+      "index"       : "index.html",
+      "error"       : "error.html",
+      "roots":{
+        "authenticated": "/Users/lschans/Projects/maxpane-engine/webroot",
+        "unauthenticated": "/Users/lschans/Projects/maxpane-engine/loginroot",
+        "common": "/Users/lschans/Projects/maxpane-engine/public"
+      },
+      "modules" : {
+        "GET":[
+          "parseRequest.getGet",
+          "cookies.parseCookies",
+          "session.initSession",
+          "clientInfo.getInfo",
+          "session.save",
+          "testMod.test",
+          "serve.serveFile"
+        ],
+        "POST":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ],
+        "PUT":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ],
+        "DELETE":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ],
+        "OPTIONS":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ],
+        "HEAD":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ],
+        "TRACE":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ],
+        "CONNECT":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ],
+        "PATCH":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ],
+        "UNDEFINED":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ]
+      }
+    },
+    {
+      "domain":"game.maxpane.nl",
+      "forceHTTPS"  : false,
+      "index"       : "index.html",
+      "error"       : "error.html",
+      "roots":{
+        "authenticated": "/Users/lschans/Projects/maxpane-engine/engine",
+        "unauthenticated": "/Users/lschans/Projects/maxpane-engine/loginroot",
+        "common": "/Users/lschans/Projects/maxpane-engine/public"
+      },
+      "modules" : {
+          "GET":[
+            "parseRequest.getGet",
+            "cookies.parseCookies",
+            "session.initSession",
+            "clientInfo.getInfo",
+            "session.save",
+            "serve.serveFile"
+          ],
+        "UNDEFINED":[
+          "parseRequest.getPost",
+          "cookies.parseCookies",
+          "session.initSession",
+          "authenticate.authenticate",
+          "clientInfo.getInfo",
+          "session.save",
+          "serve.serveFile"
+        ]
+      }
+  }]
+}
+

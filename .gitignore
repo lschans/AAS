@@ -22,47 +22,15 @@ build/Release
 # Dependency directory
 # Commenting this out is preferred by some people, see
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
-#node_modules/
 
-node_modules/eyes
-node_modules/posix
-node_modules/seneca
-node_modules/seneca-redis-transport
-node_modules/socket.io
-node_modules/socket.io-redis
+node_modules/*
+!node_modules/\@*
+!node_modules/@*
+node_modules/\@*/*/node_modules
+node_modules/@*/*/node_modules
 
-!node_modules/\@AAS
-!node_modules/@AAS/authenticate/
-!node_modules/@AAS/client-info/
-!node_modules/@AAS/cookies/
-!node_modules/@AAS/headers/
-!node_modules/@AAS/http-server/
-!node_modules/@AAS/https-server/
-!node_modules/\@AAS/live-reload/
-!node_modules/\@AAS/logger/
-!node_modules/\@AAS/master-proc
-!node_modules/\@AAS/parse-request/
-!node_modules/\@AAS/server-helpers/
-!node_modules/\@AAS/server-info/
-!node_modules/\@AAS/session/
-!node_modules/\@AAS/serve/
-!node_modules/\@AAS/socket-server/
-!node_modules/\@AAS/socket-manager/
-!node_modules/\@AAS/spdy-server
-!node_modules/\@AAS/ssl-socket-server/
-!node_modules/\@AAS/template/
-!node_modules/\@AAS/user/
-!node_modules/\@AAS/worker-proc
-
-node_modules/\@AAS/master-proc/node_modules/
-node_modules/\@AAS/authenticate/node_modules/
-node_modules/\@AAS/client-info/node_modules/
-node_modules/\@AAS/parse-request/node_modules/
-node_modules/\@AAS/spdy-server/node_modules/
-node_modules/\@AAS/socket-manager/node_modules/
-node_modules/\@AAS/serve/node_modules/
-node_modules/\@AAS/session/node_modules/
-certs/
+certs
+logs
 
 # Users Environment Variables
 .lock-wscript

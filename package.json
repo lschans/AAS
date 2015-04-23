@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "eyes": "^0.1.8",
+    "hiredis": "^0.3.0",
     "posix": "^2.0.0",
     "seneca": "^0.6.1",
     "seneca-redis-transport": "^0.3.0",

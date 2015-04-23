@@ -14,7 +14,7 @@ global.console.log = require('eyes').inspector({maxLength: (1024 * 16)});
 
 var config = require('./config/config.js'),
     events = require('events'),
-    execSync = require('exec-sync'),
+    //execSync = require('exec-sync'),
     posix = require('posix'),
     server = {},
     cluster = require('cluster'),

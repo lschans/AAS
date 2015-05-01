@@ -1,5 +1,5 @@
 {
-  "name": "server-helpers",
+  "name": "@AAS/server-helpers",
   "version": "1.0.0",
   "description": "Helper functions for the webserver",
   "main": "index.js",

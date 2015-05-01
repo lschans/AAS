@@ -6,6 +6,28 @@
     "seneca": "^0.6.1",
     "seneca-redis-transport": "^0.3.0",
     "socket.io": "^1.3.5",
-    "socket.io-redis": "^0.1.4"
+    "socket.io-redis": "^0.1.4",
+       
+    "@AAS/authenticate":"./lib/authenticate/",
+    "@AAS/client-info":"./lib/client-info/",
+    "@AAS/cookies":"./lib/cookies/",
+    "@AAS/headers":"./lib/headers/",
+    "@AAS/http-server":"./lib/http-server/",
+    "@AAS/https-server":"./lib/https-server/",
+    "@AAS/live-reload":"./lib/live-reload/",
+    "@AAS/logger":"./lib/logger/",
+    "@AAS/master-proc":"./lib/master-proc/",
+    "@AAS/parse-request":"./lib/parse-request/",
+    "@AAS/serve":"./lib/serve/",
+    "@AAS/server-helpers":"./lib/server-helpers/",
+    "@AAS/server-info":"./lib/server-info/",    
+    "@AAS/session":"./lib/session/",
+    "@AAS/socket-manager":"./lib/socket-manager/",
+    "@AAS/socket-server":"./lib/socket-server/",
+    "@AAS/spdy-server":"./lib/spdy-server/",
+    "@AAS/ssl-socket-server":"./lib/ssl-socket-server/",    
+    "@AAS/template" : "./lib/template",
+    "@AAS/user" : "./lib/user",
+    "@AAS/worker-proc" : "./lib/worker-proc"
   }
 }

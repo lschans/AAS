@@ -6,6 +6,27 @@
     "seneca": "^0.6.1",
     "seneca-redis-transport": "^0.3.0",
     "socket.io": "^1.3.5",
-    "socket.io-redis": "^0.1.4"
+    "socket.io-redis": "^0.1.4",
+    "@AAS/authenticate":"./node_modules/@AAS/authenticate/",
+    "@AAS/client-info":"./node_modules/@AAS/client-info/",
+    "@AAS/cookies":"./node_modules/@AAS/cookies/",
+    "@AAS/headers":"./node_modules/@AAS/headers/",
+    "@AAS/http-server":"./node_modules/@AAS/http-server/",
+    "@AAS/https-server":"./node_modules/@AAS/https-server/",
+    "@AAS/live-reload":"./node_modules/@AAS/live-reload/",
+    "@AAS/logger":"./node_modules/@AAS/logger/",
+    "@AAS/master-proc":"./node_modules/@AAS/master-proc/",
+    "@AAS/parse-request":"./node_modules/@AAS/parse-request/",
+    "@AAS/serve":"./node_modules/@AAS/serve/",
+    "@AAS/server-helpers":"./node_modules/@AAS/server-helpers/",
+    "@AAS/server-info":"./node_modules/@AAS/server-info/",    
+    "@AAS/session":"./node_modules/@AAS/session/",
+    "@AAS/socket-manager":"./node_modules/@AAS/socket-manager/",
+    "@AAS/socket-server":"./node_modules/@AAS/socket-server/",
+    "@AAS/spdy-server":"./node_modules/@AAS/spdy-server/",
+    "@AAS/ssl-socket-server":"./node_modules/@AAS/ssl-socket-server/",    
+    "@AAS/template" : "./node_modules/@AAS/template",
+    "@AAS/user" : "./node_modules/@AAS/user",
+    "@AAS/worker-proc" : "./node_modules/@AAS/worker-proc"    
   }
 }

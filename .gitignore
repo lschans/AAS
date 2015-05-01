@@ -24,10 +24,12 @@ build/Release
 # https://www.npmjs.org/doc/misc/npm-faq.html#should-i-check-my-node_modules-folder-into-git-
 
 node_modules/*
-!node_modules/\@*
-!node_modules/@*
-node_modules/\@*/*/node_modules
-node_modules/@*/*/node_modules
+
+# These are not necessary anymore when we use local dependencies (@see package.json)
+# !node_modules/\@*
+# !node_modules/@*
+# node_modules/\@*/*/node_modules
+# node_modules/@*/*/node_modules
 
 certs
 logs

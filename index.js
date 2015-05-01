@@ -64,19 +64,20 @@ if (cluster.isMaster) {
 
 // Catch process errors
 
-process.on('uncaughtException', function (err) {
-    switch(err.code) {
-        case "ECONNRESET":
-            console.log('Error ECONNRESET, a client disconnected dirty');
-            break;
+if (cluster.isMaster) {
+    process.on('uncaughtException', function (err) {
+        switch(err.code) {
+            case "ECONNRESET":
+                console.log('Error ECONNRESET, a client disconnected dirty');
+                break;
 
-        case "ECONNREFUSED":
-            console.log('Error ECONNREFUSED, could not open a port for listening');
-            break;
+            case "ECONNREFUSED":
+                console.log('Error ECONNREFUSED, could not open a port for listening');
+                break;
 
-        default:
-            console.error(JSON.stringify(err));
-            console.log("Unknown error, my PID:" + process.pid);
-    }
-});
-
+            default:
+                console.error(JSON.stringify(err));
+                console.log("Unknown error, my PID:" + process.pid);
+        }
+    });
+}

@@ -5,8 +5,7 @@
     "test"  : "test script here"
   },
   "middleWare":[
-    {"name" : "testMod", "path":"/Users/lschans/Projects/maxpane-engine/aas_modules/testMod"},
-    {"name" : "smartyReplace", "path":"/Users/lschans/Projects/maxpane-engine/aas_modules/smartyReplace"}
+    {"name" : "testMod", "path":"aas_modules/testMod"}
   ],
   "defaultDomain":"game.maxpane.nl",
   "AAS" :[
@@ -16,9 +15,9 @@
       "index"       : "index.html",
       "error"       : "error.html",
       "roots":{
-        "authenticated": "/Users/lschans/Projects/maxpane-engine/webroot",
-        "unauthenticated": "/Users/lschans/Projects/maxpane-engine/loginroot",
-        "common": "/Users/lschans/Projects/maxpane-engine/public"
+        "authenticated": "webroot",
+        "unauthenticated": "loginroot",
+        "common": "public"
       },
       "modules" : {
         "GET":[
@@ -119,9 +118,9 @@
       "index"       : "index.html",
       "error"       : "error.html",
       "roots":{
-        "authenticated": "/Users/lschans/Projects/maxpane-engine/engine",
-        "unauthenticated": "/Users/lschans/Projects/maxpane-engine/loginroot",
-        "common": "/Users/lschans/Projects/maxpane-engine/public"
+        "authenticated": "engine",
+        "unauthenticated": "loginroot",
+        "common": "public"
       },
       "modules" : {
           "GET":[

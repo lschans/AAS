@@ -11,7 +11,8 @@
  */
 
 var config = {},
-    fs = require('fs');
+    fs = require('fs'),
+    path = require('path');
 
 config.reload = function() {
     if (config.global.verbose === true) console.log('Reloading configurations.');
@@ -39,7 +40,36 @@ function loadConfig() {
     });
 
     // Load app specific config
-    config.global.app = require(config.global.app);
+
+    var appPath = config.global.app;
+    if (appPath.charAt(0) !== '/') {
+        // relative path.
+        appPath = path.join(process.cwd(), appPath);
+    }
+
+    appFile = require.resolve(appPath);
+
+    if (!appFile) {
+        throw new Error(process.cwd() + '/config/global.js key `app` ' + config.global.app + ' could not  be found.');
+    }
+
+    appPath = path.dirname(appFile);
+
+    config.global.app = require(appFile);
+
+    // Succesfully loaded app, create a require.
+    config.global.require = function (module) {
+        return require(config.global.require.resolve(module));
+    };
+
+    config.global.require.resolve = function (module) {
+        if (module.charAt(0) !== '/') {
+            // relative path.
+            return path.join(appPath, module);
+        } else {
+            return module;
+        }
+    }
 }
 
 // Initial load config

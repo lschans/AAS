@@ -1,5 +1,5 @@
 {
-  "name": "headers",
+  "name": "@AAS/headers",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

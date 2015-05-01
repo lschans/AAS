@@ -1,5 +1,5 @@
 {
-  "name": "worker-proc",
+  "name": "@AAS/worker-proc",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",

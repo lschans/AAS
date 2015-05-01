@@ -1,5 +1,5 @@
 {
-  "name": "session",
+  "name": "@AAS/session",
   "version": "1.0.0",
   "description": "Session manager",
   "main": "index.js",
